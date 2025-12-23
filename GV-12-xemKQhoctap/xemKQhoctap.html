@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education management</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <style>
+        @page {
+            @bottom-left {
+                content: counter(page) ' of ' counter(pages);
+            }
+        }
+    </style>
+    <div class="wrapper ">
+        <div class="left-sidebar">
+            <div class="sidebar-top">
+                <a href="javascript:void(0)" class="menu-icon">
+                    <i class="fal fa-indent"></i>
+                </a>
+                <a href="javascript:void(0)" class="menu-icon-mobi">
+                    <i class="fal fa-indent"></i>
+                </a>
+                <a class="logo" href="#">
+                    <img class="logo-icon" src="../assets/images/logo.png">
+                    <img class="logo-name" src="../assets/images/logo-name.png">
+                </a>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-hiden"></div>
+            </div>
+
+            <div class="sidebar-menu">
+                <div class="accordion" id="sidebar-menu">
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header" href="">
+                            <i class="fas fa-house item-icon"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </div>
+                    <!-- siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header" data-bs-toggle="collapse" data-bs-target="#collapse1" href="javascrip:void(0)">
+                            <i class="fal fa-id-card item-icon"></i>
+                            <span>Profile</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse " id="collapse1" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1 co the dai hon</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2" href="javascrip:void(0)">
+                            <i class="fal fa-book-reader item-icon"></i>
+                            <span>Góc học tập</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse2" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse3" href="javascrip:void(0)">
+                            <i class="fal fa-hospital-user item-icon"></i>
+                            <span>Ký túc xá</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse3" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item active">
+                        <a class="sidebar-menu-header " data-bs-toggle="collapse" data-bs-target="#collapse4" href="javascrip:void(0)">
+                            <i class="fal fa-users-class item-icon"></i>
+                            <span>Đăng ký học</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse show" id="collapse4" data-bs-parent="#sidebar-menu">
+                            <a href="#" class="active">Đăng ký</a>
+                            <a href="#">Nguyện vọng</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse5" href="javascrip:void(0)">
+                            <i class="fal fa-calendar-alt item-icon"></i>
+                            <span>Thời khóa biểu</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse5" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse6" href="javascrip:void(0)">
+                            <i class="fal fa-sack-dollar item-icon"></i>
+                            <span>Tài chính</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse6" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse7" href="javascrip:void(0)">
+                            <i class="fal fa-book item-icon"></i>
+                            <span>Thư viện</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse7" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+                    <!-- end siderbar menu  item -->
+                    <div class="sidebar-menu-item">
+                        <a class="sidebar-menu-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse8" href="javascrip:void(0)">
+                            <i class="fal fa-user-graduate item-icon"></i>
+                            <span>Hệ thống 1 cửa sinh viên</span>
+                            <i class="fal fa-chevron-right item-arrow-icon"></i>
+                            <i class="fal fa-chevron-down item-arrow-icon down"></i>
+                        </a>
+                        <div class="sidebar-menu-sub collapse" id="collapse8" data-bs-parent="#sidebar-menu">
+                            <a href="#">Profile demo 1</a>
+                            <a href="#">Profile demo 2</a>
+                            <a href="#">Profile demo 3</a>
+                        </div>
+                    </div>
+                    <!-- end siderbar menu  item -->
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="content-page ">
+            <!-- navbar -->
+            <div class="navbar">
+                <div class="search-group-in-mobi">
+                    <i class="fal fa-search mobi-search-icon"></i>
+                    <form class="search-group">
+                        <input type="email" class="search-form" placeholder="Tìm kiếm thông tin">
+                        <button><i class="fal fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="in-mobi-group">
+                    <div class="nav-menu-group">
+                        <div class="dropdown">
+                            <button class=" " type="button" data-bs-toggle="dropdown">
+                            <i class="fal fa-ellipsis-h-alt"></i>
+                        </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-notification">
+                        <div class="dropdown">
+                            <button class=" " type="button" data-bs-toggle="dropdown">
+                            <i class="fal fa-bell"><span class="noti-count">3</span></i>
+
+                        </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-setting">
+                        <div class="dropdown">
+                            <button class=" " type="button" data-bs-toggle="dropdown">
+                            <i class="fal fa-cog"></i>
+
+                        </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-account">
+                        <div class="dropdown">
+                            <button class=" " type="button" data-bs-toggle="dropdown">
+                            <div class="user-image">
+                                <i class="fas fa-user user-icon"></i>
+                            </div>
+                            <span>Admin</span>
+                            <i class="fal fa-chevron-down user-arrow"></i>
+
+
+                        </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end navbar -->
+            <!-- content -->
+            <div class="content one-door study-space">
+                <div class="overlay"></div>
+                <div class="content-tab no-tab">
+                    <p class="link">
+                        <a href="#">Góc học tập</a><i class="fal fa-angle-right"></i>
+                        <a href="#">Tra cứu điểm</a></p>
+                </div>
+
+                <div class="row register-school">
+                    <div class="col-12 col-md-3 register-school-left">
+                        <!--Thông các khoản tiền và đang ký học-->
+                        <div class="reg-money box-shadow pd-15">
+                            <div class="department-selector">
+                                <div class="form-item d-flex mb-15 form-add-info">
+                                    <div class="input-group">
+                                        <i class="fal fa-angle-down"></i>
+                                        <select class="form-select" aria-label="Default select example">
+                                         
+                                            <option selected value="1">Công nghệ thông tin</option>
+                                            <option value="2">Kế toán</option>
+                                            <option value="3">Điện tử</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                </select>
+                            </div>
+                            <ul class="sspace-profile list-unstyled">
+                                <li>
+                                    <i class="fal fa-user-alt"></i>
+                                    <span class="label">Họ tên:</span>
+                                    <b>Trần Thế Quyền</b>
+                                </li>
+                                <li>
+                                    <i class="fal fa-id-card"></i>
+                                    <span class="label">Mã số:</span>
+                                    <b>0</b>
+                                </li>
+                                <li>
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <span class="label">Ngày sinh:</span>
+                                    <b>15/01/2005</b>
+                                </li>
+                                <li>
+                                    <i class="fal fa-user-alt"></i>
+                                    <span class="label">Giới tính:</span>
+                                    <b>Nam</b>
+                                </li>
+                                <li>
+                                    <i class="fal fa-file-upload"></i>
+                                    <span class="label">Trạng thái:</span>
+                                    <b>0</b>
+                                </li>
+                                <li>
+                                    <i class="fal fa-users-class"></i>
+                                    <span class="label">Lớp:</span>
+                                    <b>CNTT 06</b>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--   Box -->
+                        <div class="mt-4 box-shadow box-scores bottom-radius-none">
+                            <div class="block-label top-radius">
+                                <i class="fas fa-file-signature"></i>
+                                <span>Điểm mới</span>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <span class="subject">Kỹ năng mềm và khởi sự doanh nghiệp</span>
+                                    <span><b>null</b></span>
+                                </li>
+                                <li>
+                                    <span class="subject">Toán cao cấp</span>
+                                    <span class="color-blue"><b>9.0</b></span>
+                                </li>
+                                <li>
+                                    <span class="subject">Kỹ thuật thủy khí</span>
+                                    <span class="color-orange"><b>3.7</b></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--   Box -->
+                        <div class="mt-2 box-shadow box-scores top-radius-none box-total-scores">
+                            <div class="block-label light-gray-bg text-dark">
+                                <i class="fas fa-file-spreadsheet"></i>
+                                <span>Tổng điểm</span>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <span class="subject">Tổng số tín chỉ</span>
+                                    <span>50</span>
+                                </li>
+                                <li>
+                                    <span class="subject">Tổng số tín chỉ</span>
+                                    <span>50</span>
+                                </li>
+                                <li>
+                                    <span class="subject">Tổng số tín chỉ</span>
+                                    <span>50</span>
+                                </li>
+                                <li>
+                                    <span class="subject">Tổng số tín chỉ</span>
+                                    <span>50</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9 register-school-right">
+                        <div class="tabs-scores">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                        <i class="fal fa-file-invoice"></i>
+                                        <span>Bảng điểm</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                        <i class="fal fa-file-times"></i>
+                                        <span>Học phần chưa qua</span>
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                        <i class="fal fa-head-side-virus"></i>
+                                        <span>Hiển thị khối kiến thức</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content box-shadow" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="accordion transcrip-accordion" id="accordionExample">
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header" href="#collapse11" data-bs-toggle="collapse">
+                                                    <i class="fal fa-chevron-circle-right"></i>
+                                                    <span>Năm học 2021_2022 - Học kỳ 2</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <table class="table transcrip-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center" scope="col">STT</th>
+                                                                <th scope="col">Mã học phần</th>
+                                                                <th scope="col">Tên học phần</th>
+                                                                <th class="text-center" scope="col">Số tín chỉ</th>
+                                                                <th class="text-center" scope="col">Lần học</th>
+                                                                <th class="text-center" scope="col">Lần thi</th>
+                                                                <th class="text-center" scope="col">Điểm hệ 10</th>
+                                                                <th class="text-center" scope="col">Điểm hệ 4</th>
+                                                                <th class="text-center" scope="col">Điểm chữ</th>
+                                                                <th class="text-center" scope="col">Đánh giá</th>
+                                                                <th scope="col">Chi tiết</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                <td><em class="show-in-mobi">Chi tiết:</em><a href="#">Chi tiết</a></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                <td><em class="show-in-mobi">Chi tiết:</em><a href="#">Chi tiết</a></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                <td><em class="show-in-mobi">Chi tiết:</em><a href="#">Chi tiết</a></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                <td><em class="show-in-mobi">Chi tiết:</em><a href="#">Chi tiết</a></td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                <td><em class="show-in-mobi">Chi tiết:</em><a href="#">Chi tiết</a></td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="row py-4">
+                                                        <div class="synthetic-line"></div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <div class="summary-row">
+                                                                <span class="color-66">Tổng tín chỉ</span>
+                                                                <span>50</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header collapsed" href="#collapse22" data-bs-toggle="collapse">
+                                                    <i class="fal fa-chevron-circle-right"></i>
+                                                    <span>Năm học 2021_2022 - Học kỳ 1</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    content
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header collapsed" href="#collapse33" data-bs-toggle="collapse">
+                                                    <i class="fal fa-chevron-circle-right"></i>
+                                                    <span>Năm học 2020_2021 - Học kỳ 2</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    content
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="accordion-body">
+                                        <table class="table transcrip-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center" scope="col">STT</th>
+                                                    <th scope="col">Mã học phần</th>
+                                                    <th scope="col">Tên học phần</th>
+                                                    <th class="text-center" scope="col">Số tín chỉ</th>
+                                                    <th class="text-center" scope="col">Lần học</th>
+                                                    <th class="text-center" scope="col">Lần thi</th>
+                                                    <th class="text-center" scope="col">Điểm hệ 10</th>
+                                                    <th class="text-center" scope="col">Điểm hệ 4</th>
+                                                    <th class="text-center" scope="col">Điểm chữ</th>
+                                                    <th class="text-center" scope="col">Đánh giá</th>
+                                                    <th scope="col">Chi tiết</th>
+                                                </tr>
+                                            </thead>
+
+                                        </table>
+                                        <div class="table-not-content text-center py-5">
+                                            <img src="../assets/images/search-file.png" alt="">
+                                            <p>Không có dữ liệu</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="accordion accodion-block" id="accordion_block">
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header collapsed" href="#block_1" data-bs-toggle="collapse">
+                                                    <i class="fal fa-minus"></i>
+                                                    <i class="fal fa-plus"></i>
+                                                    <span>Block 1</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="block_1" class="accordion-collapse collapse" data-bs-parent="#accordion_block">
+                                                <div class="accordion-body">
+                                                    <ul class="list-unstyled block-list">
+                                                        <li class="block-sub">
+                                                            <div class="sub-block-header">
+                                                                <i class="fas fa-chevron-right"></i>
+                                                                <span>Block 1.1</span>
+                                                            </div>
+                                                            <table class="table block-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="col">STT</th>
+                                                                        <th scope="col">Mã học phần</th>
+                                                                        <th scope="col">Tên học phần</th>
+                                                                        <th class="text-center" scope="col">Số tín chỉ</th>
+                                                                        <th class="text-center" scope="col">Lần học</th>
+                                                                        <th class="text-center" scope="col">Lần thi</th>
+                                                                        <th class="text-center" scope="col">Điểm hệ 10</th>
+                                                                        <th class="text-center" scope="col">Điểm hệ 4</th>
+                                                                        <th class="text-center" scope="col">Điểm chữ</th>
+                                                                        <th class="text-center" scope="col">Đánh giá</th>
+                                                                        <th scope="col">Chi tiết</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                        <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                        <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                        <td><em class="show-in-mobi">Chi tiết:</em><a href="#block_detail" data-bs-toggle="modal">Chi tiết</a></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                        <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                        <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                        <td><em class="show-in-mobi">Chi tiết:</em><a href="#block_detail" data-bs-toggle="modal">Chi tiết</a></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                        <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                        <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                        <td><em class="show-in-mobi">Chi tiết:</em><a href="#block_detail" data-bs-toggle="modal">Chi tiết</a></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                        <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                        <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                        <td><em class="show-in-mobi">Chi tiết:</em><a href="#block_detail" data-bs-toggle="modal">Chi tiết</a></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="text-center" scope="row"><em class="show-in-mobi">STT</em><span>1</span></th>
+                                                                        <td><em class="show-in-mobi">Mã học phần:</em><span>450820989</span></td>
+                                                                        <td><em class="show-in-mobi">Tên học phần:</em><span>Bảo dưỡng sửa chữa hệ thống truyền lực</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Số tín chỉ:</em><span>5</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần học:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Lần thi:</em><span>1</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 10:</em><span>6.2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm hệ 4:</em><span>2</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Điểm chữ:</em><span>C</span></td>
+                                                                        <td class="text-center"><em class="show-in-mobi">Đánh giá:</em><span>Đạt</span></td>
+                                                                        <td><em class="show-in-mobi">Chi tiết:</em><a href="#block_detail" data-bs-toggle="modal">Chi tiết</a></td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header collapsed" href="#block_2" data-bs-toggle="collapse">
+                                                    <i class="fal fa-minus"></i>
+                                                    <i class="fal fa-plus"></i>
+                                                    <span>Block 2</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="block_2" class="accordion-collapse collapse" data-bs-parent="#accordion_block">
+                                                <div class="accordion-body">
+                                                    content
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+
+                                            <div class="accordion-header">
+                                                <a class="header collapsed" href="#block_3" data-bs-toggle="collapse">
+                                                    <i class="fal fa-minus"></i>
+                                                    <i class="fal fa-plus"></i>
+                                                    <span>Block 3</span>
+                                                </a>
+                                            </div>
+
+
+                                            <div id="block_3" class="accordion-collapse collapse" data-bs-parent="#accordion_block">
+                                                <div class="accordion-body">
+                                                    content
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end content -->
+
+        <!-- copy right -->
+        <div class="copyright ">
+            <marquee>
+                Đơn vị phát triển: Công ty Cổ Phần dịch vụ Công nghệ APIS - Địa chỉ: Tầng 6 Tháp Tây, Tòa nhà Hancorp, Số, 72 Trần Đăng Ninh, P, Cầu Giấy, Hà Nội - Điện thoại: 024 3204 5867
+            </marquee>
+        </div>
+        <!-- end copy right -->
+    </div>
+
+    <!-- Modal-->
+    <div class="modal fade block-knowledge" id="block_detail" tabindex="-1" aria-labelledby="zoomfileLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-1800">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="zoomfileLabel">
+                        Thông tin lớp quản lý Lớp A - Khóa 60 - Ngành CNTT - 2022_2023_2,1
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="kqht-modal">
+                    <div class="left fs-14">
+                        <table class="table" id="tblHocKy_KetQua">
+                            <thead>
+                                <tr>
+                                    <th class="text-center align-middle">STT</th>
+                                    <th class="text-center align-middle">Kỳ, đợt</th>
+                                </tr>
+                            </thead>
+                            <tbody class="pointer"><tr id="DEB7F2B1F49E4BB2AA4348EEBD477FE2" class="btnEdit"><td style="text-align: center;">1</td><td style="text-align: center;">2025_2026_1,3</td></tr><tr id="5EEEA893758B49D3929792FF7DE0D9E5" class="btnEdit"><td style="text-align: center;">2</td><td style="text-align: center;">2025_2026_1,1</td></tr><tr id="8EB46C1A2B63425F8F69CA453C1E7B9E" class="btnEdit"><td style="text-align: center;">3</td><td style="text-align: center;">2024_2025_3,3</td></tr><tr id="68E0741CA6A5456BAADD51B4A7B58E57" class="btnEdit tr-bg"><td style="text-align: center;">4</td><td style="text-align: center;">2024_2025_3,2</td></tr><tr id="FC633CBF3E7B427C9FFB80FB80DB09F1" class="btnEdit"><td style="text-align: center;">5</td><td style="text-align: center;">2024_2025_3,1</td></tr><tr id="B454CBFF39E7493E909993479505E899" class="btnEdit"><td style="text-align: center;">6</td><td style="text-align: center;">2024_2025_2,3</td></tr><tr id="187E0479EF1C41DC9EFD4DBFC222C897" class="btnEdit"><td style="text-align: center;">7</td><td style="text-align: center;">2024_2025_2,2</td></tr><tr id="DD8FAF04629B4B20BB82001C035D85E5" class="btnEdit"><td style="text-align: center;">8</td><td style="text-align: center;">2024_2025_2,1</td></tr><tr id="CC51BCFEE6E049EC8565B106B2B113A3" class="btnEdit"><td style="text-align: center;">9</td><td style="text-align: center;">2024_2025_1,1</td></tr><tr id="6DE47C82A4FB43EAA9CC455FC5BB0EF0" class="btnEdit"><td style="text-align: center;">10</td><td style="text-align: center;">2023_2024_3,1</td></tr><tr id="EF7CD8EAB1CD44619E6E543CE1F03B5B" class="btnEdit"><td style="text-align: center;">11</td><td style="text-align: center;">2023_2024_2,1</td></tr><tr id="A515A58DF39F4FFC8768896B44EBF011" class="btnEdit"><td style="text-align: center;">12</td><td style="text-align: center;">2023_2024_1,1</td></tr><tr id="A966275585514D7395F00C7862971C40" class="btnEdit"><td style="text-align: center;">13</td><td style="text-align: center;">2022_2023_3,1</td></tr><tr id="15DE9B491B994FC0BA071CD4A692C3D9" class="btnEdit"><td style="text-align: center;">14</td><td style="text-align: center;">2022_2023_2,1</td></tr><tr id="61C7AC6DA1134C79B9C2E98EBDDB6DE5" class="btnEdit"><td style="text-align: center;">15</td><td style="text-align: center;">2022_2023_1,1</td></tr></tbody>
+                        </table>
+                    </div>
+                    <div class="right p-3">
+                        <table class="table transcrip-table tabs-scores border" id="tblLop_KetQua">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">STT</th>
+                                    <th rowspan="2" class=" align-middle" scope="col">Họ tên</th>
+                                    <th rowspan="2" class=" align-middle" scope="col">Mã số</th>
+                                    <th rowspan="2" class=" align-middle" scope="col">Ngày sinh</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Trạng thái</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Trạng thái tài chính</th>
+                                    <th rowspan="2" class="text-center align-middle" scope="col">Chuyên cần</th>
+                                    <th colspan="3" class="text-center bg-white align-middle border-bottom border-left" scope="col">Tổng số tín</th>
+                                    <th colspan="2" class="text-center bg-white align-middle border-bottom border-left" scope="col" id="lblHocPhanDangKy_KetQua">Học phần đăng ký</th>
+
+
+
+                                </tr>
+                                <tr><th class="text-center fw-normal border-left bg-white">Học đi</th><th class="text-center fw-normal border-left bg-white">Học lại</th><th class="text-center fw-normal border-left bg-white">Học nâng điểm</th><th class="text-center fw-normal border-left bg-white" style="width: 70px">Thương mại điện tử - SCMT3001(3)</th><th class="text-center fw-normal border-left bg-white" style="width: 70px">Thống kê trong kinh tế và kinh doanh - STAT2001(3)</th></tr>
+                            </thead>
+                            <tbody><tr><td class="text-center" scope="row">1</td><td>BBA220001</td><td>Đào Ngọc - An</td><td>21/03/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencanF091A51EDFD74942AAD086B1C1202376"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svF091A51EDFD74942AAD086B1C1202376" id="F091A51EDFD74942AAD086B1C1202376" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_F091A51EDFD74942AAD086B1C1202376_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svF091A51EDFD74942AAD086B1C1202376" id="F091A51EDFD74942AAD086B1C1202376" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_F091A51EDFD74942AAD086B1C1202376_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">2</td><td>BBA220019</td><td>Đoàn Văn - Ánh</td><td>09/03/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan79D8F512F89F47309057482439FCC1FB">3/1</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv79D8F512F89F47309057482439FCC1FB" id="79D8F512F89F47309057482439FCC1FB" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_79D8F512F89F47309057482439FCC1FB_533151F2932F48AFB9C24C5EA7A86B36" tietvang="3" buoivang="1">X(3/1) + 6.3%</span></td><td class="text-center pointer border-left sv79D8F512F89F47309057482439FCC1FB" id="79D8F512F89F47309057482439FCC1FB" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_79D8F512F89F47309057482439FCC1FB_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">3</td><td>BBA220024</td><td>Nguyễn Thị - Bình</td><td>05/12/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan8169A925583C4C39B0F569D49A47EC9F"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv8169A925583C4C39B0F569D49A47EC9F" id="8169A925583C4C39B0F569D49A47EC9F" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_8169A925583C4C39B0F569D49A47EC9F_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv8169A925583C4C39B0F569D49A47EC9F" id="8169A925583C4C39B0F569D49A47EC9F" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_8169A925583C4C39B0F569D49A47EC9F_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">4</td><td>BBA220515</td><td>Hoàng Thị Huyền - Chang</td><td>02/07/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan51DA5ABDA7104A5FA4F0E0CC7CB12250"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv51DA5ABDA7104A5FA4F0E0CC7CB12250" id="51DA5ABDA7104A5FA4F0E0CC7CB12250" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_51DA5ABDA7104A5FA4F0E0CC7CB12250_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv51DA5ABDA7104A5FA4F0E0CC7CB12250" id="51DA5ABDA7104A5FA4F0E0CC7CB12250" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_51DA5ABDA7104A5FA4F0E0CC7CB12250_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">5</td><td>BBA220385</td><td>Nguyễn Thị Thu - Cúc</td><td>14/09/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanE5190DBE85104714A0A63D3106ACA483"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svE5190DBE85104714A0A63D3106ACA483" id="E5190DBE85104714A0A63D3106ACA483" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_E5190DBE85104714A0A63D3106ACA483_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svE5190DBE85104714A0A63D3106ACA483" id="E5190DBE85104714A0A63D3106ACA483" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_E5190DBE85104714A0A63D3106ACA483_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">6</td><td>BBA220050</td><td>Nguyễn Bá Khương - Duy</td><td>30/03/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan5F7C38F0FA5749C1BA11FB37F49EC4DA"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv5F7C38F0FA5749C1BA11FB37F49EC4DA" id="5F7C38F0FA5749C1BA11FB37F49EC4DA" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_5F7C38F0FA5749C1BA11FB37F49EC4DA_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv5F7C38F0FA5749C1BA11FB37F49EC4DA" id="5F7C38F0FA5749C1BA11FB37F49EC4DA" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_5F7C38F0FA5749C1BA11FB37F49EC4DA_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">7</td><td>BBA220035</td><td>Nguyễn Văn - Đạt</td><td>19/10/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan5E6F1E7805534EBE9FDD4945010DA608"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv5E6F1E7805534EBE9FDD4945010DA608" id="5E6F1E7805534EBE9FDD4945010DA608" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_5E6F1E7805534EBE9FDD4945010DA608_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv5E6F1E7805534EBE9FDD4945010DA608" id="5E6F1E7805534EBE9FDD4945010DA608" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_5E6F1E7805534EBE9FDD4945010DA608_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">8</td><td>BBA220043</td><td>Bùi Văn - Đức</td><td>27/10/2003</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan08587BEDA61E479C9D94958E8B62BC2E"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv08587BEDA61E479C9D94958E8B62BC2E" id="08587BEDA61E479C9D94958E8B62BC2E" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_08587BEDA61E479C9D94958E8B62BC2E_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv08587BEDA61E479C9D94958E8B62BC2E" id="08587BEDA61E479C9D94958E8B62BC2E" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_08587BEDA61E479C9D94958E8B62BC2E_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">9</td><td>BBA220211</td><td>Nguyễn Thị - Giang</td><td>21/12/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">7491800</td><td class="text-center border-left" id="chuyencan21605A8CC7674013B893AB820CB0F65F">9/3</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv21605A8CC7674013B893AB820CB0F65F" id="21605A8CC7674013B893AB820CB0F65F" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_21605A8CC7674013B893AB820CB0F65F_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv21605A8CC7674013B893AB820CB0F65F" id="21605A8CC7674013B893AB820CB0F65F" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_21605A8CC7674013B893AB820CB0F65F_09D04D06AB534AE8B3120EDA9D9906EA" tietvang="9" buoivang="3">X(9/3) + 18.8%</span></td></tr><tr><td class="text-center" scope="row">10</td><td>BBA220061</td><td>Vũ Thị Diệu - Hiền</td><td>22/07/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan31A387DF3A9F49CABD8CB7127C0EDEF8"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv31A387DF3A9F49CABD8CB7127C0EDEF8" id="31A387DF3A9F49CABD8CB7127C0EDEF8" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_31A387DF3A9F49CABD8CB7127C0EDEF8_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv31A387DF3A9F49CABD8CB7127C0EDEF8" id="31A387DF3A9F49CABD8CB7127C0EDEF8" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_31A387DF3A9F49CABD8CB7127C0EDEF8_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">11</td><td>BBA220067</td><td>Nguyễn Thị Khánh - Hòa</td><td>19/11/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan7C85D4A465AD4D89AA15DEEEAFABFEA6"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv7C85D4A465AD4D89AA15DEEEAFABFEA6" id="7C85D4A465AD4D89AA15DEEEAFABFEA6" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_7C85D4A465AD4D89AA15DEEEAFABFEA6_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv7C85D4A465AD4D89AA15DEEEAFABFEA6" id="7C85D4A465AD4D89AA15DEEEAFABFEA6" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_7C85D4A465AD4D89AA15DEEEAFABFEA6_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">12</td><td>BBA220074</td><td>Lê Nhật - Hoàng</td><td>01/09/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan726A9B09E73D4300915F632F40A21751"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv726A9B09E73D4300915F632F40A21751" id="726A9B09E73D4300915F632F40A21751" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_726A9B09E73D4300915F632F40A21751_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv726A9B09E73D4300915F632F40A21751" id="726A9B09E73D4300915F632F40A21751" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_726A9B09E73D4300915F632F40A21751_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">13</td><td>BBA220073</td><td>Nguyễn Huy - Hoàng</td><td>29/10/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanB4226B382D744B7E9A5E886C9330D85C"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svB4226B382D744B7E9A5E886C9330D85C" id="B4226B382D744B7E9A5E886C9330D85C" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B4226B382D744B7E9A5E886C9330D85C_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svB4226B382D744B7E9A5E886C9330D85C" id="B4226B382D744B7E9A5E886C9330D85C" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B4226B382D744B7E9A5E886C9330D85C_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">14</td><td>BBA220079</td><td>Chu Thanh - Hương</td><td>28/04/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanB0BC468E96D049B695CC2351E0A63096"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svB0BC468E96D049B695CC2351E0A63096" id="B0BC468E96D049B695CC2351E0A63096" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B0BC468E96D049B695CC2351E0A63096_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svB0BC468E96D049B695CC2351E0A63096" id="B0BC468E96D049B695CC2351E0A63096" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B0BC468E96D049B695CC2351E0A63096_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">15</td><td>BBA220274</td><td>Lưu Thị - Hương</td><td>17/02/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan86962C5E49FE4461912A096B442F78D5"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv86962C5E49FE4461912A096B442F78D5" id="86962C5E49FE4461912A096B442F78D5" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_86962C5E49FE4461912A096B442F78D5_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv86962C5E49FE4461912A096B442F78D5" id="86962C5E49FE4461912A096B442F78D5" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_86962C5E49FE4461912A096B442F78D5_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">16</td><td>BBA220436</td><td>Đặng Thùy - Linh</td><td>16/03/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanE7562390A7554066A5000A30F091C9BA">6/2</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svE7562390A7554066A5000A30F091C9BA" id="E7562390A7554066A5000A30F091C9BA" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_E7562390A7554066A5000A30F091C9BA_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svE7562390A7554066A5000A30F091C9BA" id="E7562390A7554066A5000A30F091C9BA" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_E7562390A7554066A5000A30F091C9BA_09D04D06AB534AE8B3120EDA9D9906EA" tietvang="6" buoivang="2">X(6/2) + 12.5%</span></td></tr><tr><td class="text-center" scope="row">17</td><td>BBA220096</td><td>Đỗ Hoàng Trúc - Linh</td><td>09/04/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan3C98EEFCFA97428F837462434C72BA5F"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv3C98EEFCFA97428F837462434C72BA5F" id="3C98EEFCFA97428F837462434C72BA5F" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_3C98EEFCFA97428F837462434C72BA5F_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv3C98EEFCFA97428F837462434C72BA5F" id="3C98EEFCFA97428F837462434C72BA5F" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_3C98EEFCFA97428F837462434C72BA5F_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">18</td><td>BBA220241</td><td>Lò Hải - Linh</td><td>27/10/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan2959121BE3524F7692C38B13B179427A"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv2959121BE3524F7692C38B13B179427A" id="2959121BE3524F7692C38B13B179427A" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_2959121BE3524F7692C38B13B179427A_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv2959121BE3524F7692C38B13B179427A" id="2959121BE3524F7692C38B13B179427A" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_2959121BE3524F7692C38B13B179427A_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">19</td><td>BBA220091</td><td>Phạm Diệu - Linh</td><td>13/10/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan761FC7A22C4C455CBD2C45D4EA5A8669"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv761FC7A22C4C455CBD2C45D4EA5A8669" id="761FC7A22C4C455CBD2C45D4EA5A8669" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_761FC7A22C4C455CBD2C45D4EA5A8669_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv761FC7A22C4C455CBD2C45D4EA5A8669" id="761FC7A22C4C455CBD2C45D4EA5A8669" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_761FC7A22C4C455CBD2C45D4EA5A8669_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">20</td><td>BBA220088</td><td>Vũ Phương - Linh</td><td>28/05/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan9214AED72533486CAB77FB54E4750AF7"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv9214AED72533486CAB77FB54E4750AF7" id="9214AED72533486CAB77FB54E4750AF7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_9214AED72533486CAB77FB54E4750AF7_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv9214AED72533486CAB77FB54E4750AF7" id="9214AED72533486CAB77FB54E4750AF7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_9214AED72533486CAB77FB54E4750AF7_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">21</td><td>BBA220269</td><td>Vũ Thị Thuỳ - Linh</td><td>26/06/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan8C42329C0D8F48ADA406EB7EB3D35776"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv8C42329C0D8F48ADA406EB7EB3D35776" id="8C42329C0D8F48ADA406EB7EB3D35776" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_8C42329C0D8F48ADA406EB7EB3D35776_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv8C42329C0D8F48ADA406EB7EB3D35776" id="8C42329C0D8F48ADA406EB7EB3D35776" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_8C42329C0D8F48ADA406EB7EB3D35776_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">22</td><td>BBA220108</td><td>Bùi Thị - Mai</td><td>14/03/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanC414D11200CB467C952F32EEF50B8BD7"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svC414D11200CB467C952F32EEF50B8BD7" id="C414D11200CB467C952F32EEF50B8BD7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_C414D11200CB467C952F32EEF50B8BD7_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svC414D11200CB467C952F32EEF50B8BD7" id="C414D11200CB467C952F32EEF50B8BD7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_C414D11200CB467C952F32EEF50B8BD7_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">23</td><td>BBA220246</td><td>Nguyễn Xuân - Minh</td><td>29/10/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">16800000</td><td class="text-center border-left" id="chuyencan59A99387437349D9A801480A7684F4A0"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv59A99387437349D9A801480A7684F4A0" id="59A99387437349D9A801480A7684F4A0" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_59A99387437349D9A801480A7684F4A0_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv59A99387437349D9A801480A7684F4A0" id="59A99387437349D9A801480A7684F4A0" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_59A99387437349D9A801480A7684F4A0_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">24</td><td>BBA220123</td><td>Đặng Thị - Nga</td><td>17/10/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanCDC6C5B124B84A32B5E0C8B6BCDA6672"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svCDC6C5B124B84A32B5E0C8B6BCDA6672" id="CDC6C5B124B84A32B5E0C8B6BCDA6672" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_CDC6C5B124B84A32B5E0C8B6BCDA6672_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svCDC6C5B124B84A32B5E0C8B6BCDA6672" id="CDC6C5B124B84A32B5E0C8B6BCDA6672" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_CDC6C5B124B84A32B5E0C8B6BCDA6672_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">25</td><td>BBA220124</td><td>Đinh Hoàng - Ngân</td><td>28/02/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">16800000</td><td class="text-center border-left" id="chuyencan01B66B36AC194829A79008C39B3AA654"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv01B66B36AC194829A79008C39B3AA654" id="01B66B36AC194829A79008C39B3AA654" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_01B66B36AC194829A79008C39B3AA654_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv01B66B36AC194829A79008C39B3AA654" id="01B66B36AC194829A79008C39B3AA654" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_01B66B36AC194829A79008C39B3AA654_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">26</td><td>BBA220129</td><td>Nguyễn Cao Bảo - Ngọc</td><td>29/12/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan1EBB6A118E534F55B825CEB09B3C253C"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv1EBB6A118E534F55B825CEB09B3C253C" id="1EBB6A118E534F55B825CEB09B3C253C" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_1EBB6A118E534F55B825CEB09B3C253C_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv1EBB6A118E534F55B825CEB09B3C253C" id="1EBB6A118E534F55B825CEB09B3C253C" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_1EBB6A118E534F55B825CEB09B3C253C_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">27</td><td>BBA220265</td><td>Nguyễn Thị Bích - Ngọc</td><td>30/11/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan1FEED1C075FF464A8B3D935E2AD68938">3/1</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv1FEED1C075FF464A8B3D935E2AD68938" id="1FEED1C075FF464A8B3D935E2AD68938" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_1FEED1C075FF464A8B3D935E2AD68938_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv1FEED1C075FF464A8B3D935E2AD68938" id="1FEED1C075FF464A8B3D935E2AD68938" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_1FEED1C075FF464A8B3D935E2AD68938_09D04D06AB534AE8B3120EDA9D9906EA" tietvang="3" buoivang="1">X(3/1) + 6.3%</span></td></tr><tr><td class="text-center" scope="row">28</td><td>BBA220257</td><td>Nguyễn Hạnh - Nguyên</td><td>18/09/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan2E69C4693EA94273A0391AEC695BBBDD"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv2E69C4693EA94273A0391AEC695BBBDD" id="2E69C4693EA94273A0391AEC695BBBDD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_2E69C4693EA94273A0391AEC695BBBDD_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv2E69C4693EA94273A0391AEC695BBBDD" id="2E69C4693EA94273A0391AEC695BBBDD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_2E69C4693EA94273A0391AEC695BBBDD_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">29</td><td>BBA220131</td><td>Ngô Thị Phương - Nhàn</td><td>30/01/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan6AA9A52249B9487197DC658326513660"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv6AA9A52249B9487197DC658326513660" id="6AA9A52249B9487197DC658326513660" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_6AA9A52249B9487197DC658326513660_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv6AA9A52249B9487197DC658326513660" id="6AA9A52249B9487197DC658326513660" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_6AA9A52249B9487197DC658326513660_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">30</td><td>BBA220497</td><td>Nguyễn Thị Như - Quỳnh</td><td>08/06/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan20BFB73D50A44554A6286E8E8C076892"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv20BFB73D50A44554A6286E8E8C076892" id="20BFB73D50A44554A6286E8E8C076892" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_20BFB73D50A44554A6286E8E8C076892_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv20BFB73D50A44554A6286E8E8C076892" id="20BFB73D50A44554A6286E8E8C076892" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_20BFB73D50A44554A6286E8E8C076892_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">31</td><td>BBA220415</td><td>Trần Thị Phương - Quỳnh</td><td>11/03/2002</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanD70C0C4217B04717874D6CF3185F9396">3/1</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svD70C0C4217B04717874D6CF3185F9396" id="D70C0C4217B04717874D6CF3185F9396" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_D70C0C4217B04717874D6CF3185F9396_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svD70C0C4217B04717874D6CF3185F9396" id="D70C0C4217B04717874D6CF3185F9396" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_D70C0C4217B04717874D6CF3185F9396_09D04D06AB534AE8B3120EDA9D9906EA" tietvang="3" buoivang="1">X(3/1) + 6.3%</span></td></tr><tr><td class="text-center" scope="row">32</td><td>BBA220149</td><td>Phạm Hồng - Sơn</td><td>04/02/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">33600000</td><td class="text-center border-left" id="chuyencanE186FCFB4BBD4892A77464E45716E4A9"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svE186FCFB4BBD4892A77464E45716E4A9" id="E186FCFB4BBD4892A77464E45716E4A9" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_E186FCFB4BBD4892A77464E45716E4A9_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svE186FCFB4BBD4892A77464E45716E4A9" id="E186FCFB4BBD4892A77464E45716E4A9" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_E186FCFB4BBD4892A77464E45716E4A9_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">33</td><td>BBA220150</td><td>Quàng Văn - Sơn</td><td>08/02/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">10080000</td><td class="text-center border-left" id="chuyencan791659EE662942DB8B90003E947B01AD"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv791659EE662942DB8B90003E947B01AD" id="791659EE662942DB8B90003E947B01AD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_791659EE662942DB8B90003E947B01AD_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv791659EE662942DB8B90003E947B01AD" id="791659EE662942DB8B90003E947B01AD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_791659EE662942DB8B90003E947B01AD_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">34</td><td>BBA220152</td><td>Đỗ Ngọc Hiền - Tâm</td><td>25/12/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencanFB12FC19C2DF4B11BD153170ABD95A41"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svFB12FC19C2DF4B11BD153170ABD95A41" id="FB12FC19C2DF4B11BD153170ABD95A41" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_FB12FC19C2DF4B11BD153170ABD95A41_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svFB12FC19C2DF4B11BD153170ABD95A41" id="FB12FC19C2DF4B11BD153170ABD95A41" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_FB12FC19C2DF4B11BD153170ABD95A41_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">35</td><td>BBA220154</td><td>Nguyễn Thế - Tấn</td><td>29/03/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan1DD9A2C9D8D047558E76DF3654F7D49D">6/2</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv1DD9A2C9D8D047558E76DF3654F7D49D" id="1DD9A2C9D8D047558E76DF3654F7D49D" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_1DD9A2C9D8D047558E76DF3654F7D49D_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv1DD9A2C9D8D047558E76DF3654F7D49D" id="1DD9A2C9D8D047558E76DF3654F7D49D" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_1DD9A2C9D8D047558E76DF3654F7D49D_09D04D06AB534AE8B3120EDA9D9906EA" tietvang="6" buoivang="2">X(6/2) + 12.5%</span></td></tr><tr><td class="text-center" scope="row">36</td><td>BBA220209</td><td>Kiều Văn - Thành</td><td>06/04/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan99A08423AB6F478FAA66BBAAA7AA35C3"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv99A08423AB6F478FAA66BBAAA7AA35C3" id="99A08423AB6F478FAA66BBAAA7AA35C3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_99A08423AB6F478FAA66BBAAA7AA35C3_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv99A08423AB6F478FAA66BBAAA7AA35C3" id="99A08423AB6F478FAA66BBAAA7AA35C3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_99A08423AB6F478FAA66BBAAA7AA35C3_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">37</td><td>BBA220156</td><td>Nông Tiến - Thành</td><td>26/06/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan22CF9E5479234BE4AB4DBF18C22586F7"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">3</td><td class="text-center pointer border-left sv22CF9E5479234BE4AB4DBF18C22586F7" id="22CF9E5479234BE4AB4DBF18C22586F7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_22CF9E5479234BE4AB4DBF18C22586F7_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv22CF9E5479234BE4AB4DBF18C22586F7" id="22CF9E5479234BE4AB4DBF18C22586F7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_22CF9E5479234BE4AB4DBF18C22586F7_09D04D06AB534AE8B3120EDA9D9906EA">X</span></td></tr><tr><td class="text-center" scope="row">38</td><td>BBA220159</td><td>Vũ Minh - Thảo</td><td>08/10/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanF7C0148025664A1A9302F890F0CD9D44"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svF7C0148025664A1A9302F890F0CD9D44" id="F7C0148025664A1A9302F890F0CD9D44" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_F7C0148025664A1A9302F890F0CD9D44_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svF7C0148025664A1A9302F890F0CD9D44" id="F7C0148025664A1A9302F890F0CD9D44" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_F7C0148025664A1A9302F890F0CD9D44_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">39</td><td>BBA220161</td><td>Lê Vũ - Thiên</td><td>19/11/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">50400000</td><td class="text-center border-left" id="chuyencan36F48665602B45F0A3DD7DC971A61822"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv36F48665602B45F0A3DD7DC971A61822" id="36F48665602B45F0A3DD7DC971A61822" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_36F48665602B45F0A3DD7DC971A61822_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv36F48665602B45F0A3DD7DC971A61822" id="36F48665602B45F0A3DD7DC971A61822" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_36F48665602B45F0A3DD7DC971A61822_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">40</td><td>BBA220200</td><td>Lang Diệu - Thùy</td><td>17/07/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencanDFD1D25E9F624D0CBA30FBB37EACAABD"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svDFD1D25E9F624D0CBA30FBB37EACAABD" id="DFD1D25E9F624D0CBA30FBB37EACAABD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_DFD1D25E9F624D0CBA30FBB37EACAABD_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svDFD1D25E9F624D0CBA30FBB37EACAABD" id="DFD1D25E9F624D0CBA30FBB37EACAABD" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_DFD1D25E9F624D0CBA30FBB37EACAABD_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">41</td><td>BBA220445</td><td>Nguyễn Hoàng Anh - Thư</td><td>20/06/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">33600000</td><td class="text-center border-left" id="chuyencan081B63FFC3704E2F9DCB46D8BDD5DBA3"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv081B63FFC3704E2F9DCB46D8BDD5DBA3" id="081B63FFC3704E2F9DCB46D8BDD5DBA3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_081B63FFC3704E2F9DCB46D8BDD5DBA3_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv081B63FFC3704E2F9DCB46D8BDD5DBA3" id="081B63FFC3704E2F9DCB46D8BDD5DBA3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_081B63FFC3704E2F9DCB46D8BDD5DBA3_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">42</td><td>BBA220287</td><td>Nguyễn Thị Huyền - Thương</td><td>14/06/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">38000000</td><td class="text-center border-left" id="chuyencanB9A868C27DFD4116A66711EF3CE730E3"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svB9A868C27DFD4116A66711EF3CE730E3" id="B9A868C27DFD4116A66711EF3CE730E3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B9A868C27DFD4116A66711EF3CE730E3_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svB9A868C27DFD4116A66711EF3CE730E3" id="B9A868C27DFD4116A66711EF3CE730E3" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_B9A868C27DFD4116A66711EF3CE730E3_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">43</td><td>BBA220174</td><td>Hoàng Thị - Trang</td><td>10/12/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan4FE106B97D5246B1BC26E9B80DB6BDC0"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv4FE106B97D5246B1BC26E9B80DB6BDC0" id="4FE106B97D5246B1BC26E9B80DB6BDC0" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_4FE106B97D5246B1BC26E9B80DB6BDC0_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv4FE106B97D5246B1BC26E9B80DB6BDC0" id="4FE106B97D5246B1BC26E9B80DB6BDC0" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_4FE106B97D5246B1BC26E9B80DB6BDC0_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">44</td><td>BBA220522</td><td>Vũ Ngọc Phương - Trinh</td><td>07/01/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan930C5D0EE0964D40B83BC72327F40CB1"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv930C5D0EE0964D40B83BC72327F40CB1" id="930C5D0EE0964D40B83BC72327F40CB1" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_930C5D0EE0964D40B83BC72327F40CB1_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv930C5D0EE0964D40B83BC72327F40CB1" id="930C5D0EE0964D40B83BC72327F40CB1" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_930C5D0EE0964D40B83BC72327F40CB1_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">45</td><td>BBA220540</td><td>Lê Anh - Tuấn</td><td>24/01/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan3373F6923E6A440491946BAE6ED7ECA7">6/2</td><td class="text-center border-left">3</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv3373F6923E6A440491946BAE6ED7ECA7" id="3373F6923E6A440491946BAE6ED7ECA7" style="width: 70px"><span style="width: 70px; color: orange;" class="btnDSBuoiHoc" id="lblketqua_3373F6923E6A440491946BAE6ED7ECA7_533151F2932F48AFB9C24C5EA7A86B36" tietvang="6" buoivang="2">X(6/2) + 12.5%</span></td><td class="text-center pointer border-left sv3373F6923E6A440491946BAE6ED7ECA7" id="3373F6923E6A440491946BAE6ED7ECA7" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_3373F6923E6A440491946BAE6ED7ECA7_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">46</td><td>BBA220337</td><td>Đỗ Bùi - Tùng</td><td>05/05/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencanCEC3ABF8390C4EE1B209FF2CE170739E"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left svCEC3ABF8390C4EE1B209FF2CE170739E" id="CEC3ABF8390C4EE1B209FF2CE170739E" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_CEC3ABF8390C4EE1B209FF2CE170739E_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left svCEC3ABF8390C4EE1B209FF2CE170739E" id="CEC3ABF8390C4EE1B209FF2CE170739E" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_CEC3ABF8390C4EE1B209FF2CE170739E_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">47</td><td>BBA220185</td><td>Nguyễn Phương - Uyên</td><td>14/10/2004</td><td>BUỘC THÔI HỌC</td><td class="text-center border-left">0</td><td class="text-center border-left" id="chuyencan0617D2DFBD3F477C9510170DD6835CC2"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv0617D2DFBD3F477C9510170DD6835CC2" id="0617D2DFBD3F477C9510170DD6835CC2" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_0617D2DFBD3F477C9510170DD6835CC2_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv0617D2DFBD3F477C9510170DD6835CC2" id="0617D2DFBD3F477C9510170DD6835CC2" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_0617D2DFBD3F477C9510170DD6835CC2_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr><tr><td class="text-center" scope="row">48</td><td>BBA220193</td><td>Phạm Kim - Yến</td><td>23/05/2004</td><td>ĐANG HỌC</td><td class="text-center border-left">631800</td><td class="text-center border-left" id="chuyencan01602C8EFC4E4EA282CD1991DEF51A8A"></td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center border-left">0</td><td class="text-center pointer border-left sv01602C8EFC4E4EA282CD1991DEF51A8A" id="01602C8EFC4E4EA282CD1991DEF51A8A" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_01602C8EFC4E4EA282CD1991DEF51A8A_533151F2932F48AFB9C24C5EA7A86B36"></span></td><td class="text-center pointer border-left sv01602C8EFC4E4EA282CD1991DEF51A8A" id="01602C8EFC4E4EA282CD1991DEF51A8A" style="width: 70px"><span style="width: 70px;" class="btnDSBuoiHoc" id="lblketqua_01602C8EFC4E4EA282CD1991DEF51A8A_09D04D06AB534AE8B3120EDA9D9906EA"></span></td></tr></tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../assets/js/bootstrap.bundle.min.js "></script>
+<script src="../assets/js/swiper-bundle.min.js"></script>
+<script src="../assets/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="../assets/js/slick.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/masonry.pkgd.min.js"></script>
+
+
+</html>

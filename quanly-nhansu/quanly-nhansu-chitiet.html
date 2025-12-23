@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhân sự</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="header fixed-top">
+      <div class="top-nav">
+        <div class="sidebar-bars">
+          <i class="fa-light fa-bars-sort"> </i>
+        </div>
+        <div class="head-logo">
+          <a href="../index.html">
+            <img class="logo-icon" src="../assets/images/logo/logo-icon.png" />
+            <img class="logo-text" src="../assets/images/logo/logo-text.png" />
+          </a>
+        </div>
+        <div class="head-search-form">
+          <div class="head-search-toggle">
+            <i class="fal fa-search"></i>
+          </div>
+          <div class="head-search-box">
+            <div class="form">
+              <input
+                type="text"
+                class="search-imput"
+                placeholder="Tìm kiếm thông tin"
+              />
+              <button class="search-btn">
+                <i class="fal fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main-menu">
+          <ul class="list-unstyled">
+            <li class="item">
+              <a class="menu-link" href="../index.html">
+                <i class="fal fa-home"></i>
+                <span>Trang chủ</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../dashboard.html">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../modul.html">
+                <span>Modul</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../chucnang-cuaban.html">
+                <span>Chức năng của bạn</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../tintuc.html">
+                <span>Tin tức</span>
+              </a>
+            </li>
+          </ul>
+          <div class="menu-toggle">
+            <i class="fal fa-bars"></i>
+          </div>
+        </div>
+        <div class="account-group">
+          <div class="dropdown">
+            <div class="item" data-bs-toggle="dropdown">
+              <i class="fal fa-circle-check"></i>
+              <span>3</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item message" data-bs-toggle="dropdown">
+              <i class="fal fa-messages"></i>
+              <span>3</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item noti" data-bs-toggle="dropdown">
+              <i class="fal fa-bell"></i>
+              <span>9+</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item" data-bs-toggle="dropdown">
+              <img src="../assets/images/avatar.jpg" class="avatar" />
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-wrap">
+      <div class="left-sidebar">
+        <div class="sidebar-menu">
+          <div class="accordion" id="sidebar-menu">
+            <div class="sidebar-menu-item">
+              <a class="sidebar-menu-header collapsed" href="">
+                <i class="fa-light fa-house-window item-icon"></i>
+                <span>Dashboads</span>
+              </a>
+            </div>
+            <!-- siderbar menu  item -->
+            <div class="sidebar-menu-item">
+              <a
+                class="sidebar-menu-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                href="javascrip:void(0)"
+                aria-expanded="true"
+              >
+                <i class="fa-light fa-chalkboard-user item-icon"></i>
+                <span>Giảng viên</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse"
+                id="collapse1"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a class="" href="#">Thông tin chung</a>
+                  <a href="#">Nhập điểm theo lớp học phần</a>
+                  <a href="#">Điểm danh theo lớp học phần</a>
+                  <a href="#">Tra cứu hồ sơ sinh viên</a>
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+            <!-- siderbar menu  item -->
+            <div class="sidebar-menu-item">
+              <a
+                class="sidebar-menu-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                href="javascrip:void(0)"
+              >
+                <i class="fa-light fa-building-user item-icon"> </i>
+                <span>Trưởng khoa</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse"
+                id="collapse2"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a href="#">Profile demo 1</a>
+                  <a href="#">Profile demo 2</a>
+                  <a href="#">Profile demo 3</a>
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+            <div class="sidebar-menu-item active">
+              <a
+                class="sidebar-menu-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+                href="javascrip:void(0)"
+              >
+                <i class="fa-light fa-users-gear item-icon"></i>
+                <span>Nhân sự</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse show"
+                id="collapse3"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a
+                    class="active"
+                    href="nhansu/nhansu-chitiet.html"
+                    data-position="0"
+                    >Kế hoạch tuyển dụng</a
+                  >
+                  <a href="nhansu/nhansu-chitiet.html" data-position="1"
+                    >Đề xuất tuyển dụng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="quick-action tabs-slider">
+          <div class="tab-title">
+            <span>Quản lý nhân sự</span>
+            <div class="title-breadcumb">/ Thông tin cá nhân</div>
+          </div>
+          <div class="tab-list swiper label-slider auto-width-slider">
+            <div class="swiper-wrapper">
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-user-gear"></i>
+                  <p>Thông tin cá nhân</p>
+                </a>
+              </div>
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-address-book"></i>
+                  <p>Nhiệm vụ công việc</p>
+                </a>
+              </div>
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-album-collection-circle-user"></i>
+                  <p>Vai trò</p>
+                </a>
+              </div>
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-calendar-users"></i>
+                  <p>Trao đổi riêng</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action-inner"></div>
+        <div class="swiper content-slider">
+          <div class="swiper-wrapper">
+            <!-- THÔNG TIN CÁ NHÂN -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="post-page box-shadow">
+                  <div class="quanly-nhansu-thongtincanhan-page">
+                    <div class="quanly-nhansu-thongtincanhan-content">
+                      <div class="image">
+                        <img src="../assets/images/no-image.png" alt="" />
+                      </div>
+                      <div class="info">
+                        <div class="title">Thông tin cá nhân</div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Mã cán bộ</span><span>:</span>
+                          </div>
+                          <div class="text"><b>TCCPT-TE-7</b></div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Họ và tên</span><span>:</span>
+                          </div>
+                          <div class="text"><b>Nguyễn Thị Bích</b></div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Ngày sinh</span><span>:</span>
+                          </div>
+                          <div class="text">15/01/1985</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Giới tính</span><span>:</span>
+                          </div>
+                          <div class="text">Nữ</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Số điện thoại</span><span>:</span>
+                          </div>
+                          <div class="text">097474xxxx</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Địa chỉ email</span><span>:</span>
+                          </div>
+                          <div class="text">ngocbich@gmail.com</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Số CCCD</span><span>:</span>
+                          </div>
+                          <div class="text">030085xxxxxx</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Nơi cấp</span><span>:</span>
+                          </div>
+                          <div class="text">Bộ công an</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Dân tộc</span><span>:</span>
+                          </div>
+                          <div class="text">Kinh</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Quê quán</span><span>:</span>
+                          </div>
+                          <div class="text">Hải Dương</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Đ/c thường trú</span><span>:</span>
+                          </div>
+                          <div class="text">Hải Dương</div>
+                        </div>
+
+                        <div class="line-1 bg-f1 mt-20 mb-20"></div>
+                        <div class="title">Thông tin cá nhân</div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>khoa</span><span>:</span>
+                          </div>
+                          <div class="text">Công nghệ thông tin</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Bộ môn</span><span>:</span>
+                          </div>
+                          <div class="text">Công nghệ AI</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Chức danh</span><span>:</span>
+                          </div>
+                          <div class="text">Trưởng khoa</div>
+                        </div>
+                        <div class="info-row">
+                          <div class="label">
+                            <span>Ngày vào trường</span><span>:</span>
+                          </div>
+                          <div class="text">15/01/2020</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quanly-nhansu-thongtincanhan-image">
+                      <img
+                        src="../assets/images/quanly-nhansu-img.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- NHIỆM VỤ CÔNG TÁC -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="box-shadow">
+                  <div class="function">
+                    <div class="function-content">
+                      <div class="feature-content has-tabs">
+                        <div class="card today-card today-card-1 mb-40">
+                          <div class="card-header">
+                            <div class="myTab-header">
+                              <div class="myTab-header-item">
+                                <a
+                                  href="#"
+                                  class="myTab-header-link active"
+                                  data-myTab="congviectrongngay"
+                                >
+                                  Công việc trong ngày
+                                </a>
+                              </div>
+                              <div class="myTab-header-item">
+                                <a
+                                  href="#"
+                                  class="myTab-header-link"
+                                  data-myTab="congviectrongtuan"
+                                >
+                                  Công việc trong tuần
+                                </a>
+                              </div>
+                              <div class="myTab-header-item">
+                                <a
+                                  href="#"
+                                  class="myTab-header-link"
+                                  data-myTab="congviectrongthang_nam"
+                                >
+                                  Công việc trong tháng - năm
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div class="myTab-content">
+                              <div
+                                class="myTab-item show"
+                                id="congviectrongngay"
+                              >
+                                <div class="table-wrap">
+                                  <div class="table-responsive fs-14 no-swiper">
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th
+                                            class="text-center border-top-1 py-11"
+                                            scope="col"
+                                          >
+                                            STT
+                                          </th>
+                                          <th
+                                            class="min-w-200p border-top-1"
+                                            scope="col"
+                                          >
+                                            Đầu việc được giao
+                                          </th>
+                                          <th
+                                            class="min-w-200p border-top-1"
+                                            scope="col"
+                                          >
+                                            Cá nhân thực hiện báo cáo
+                                          </th>
+                                          <th
+                                            class="min-w-110p border-top-1"
+                                            scope="col"
+                                          >
+                                            Minh chứng
+                                          </th>
+                                          <th
+                                            class="min-w-150p border-top-1"
+                                            scope="col"
+                                          >
+                                            Nhận xét / Đánh giá
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >1</span
+                                            >
+                                          </td>
+                                          <td>Đầu việc được giao</td>
+                                          <td>Trần Thế Bảo</td>
+                                          <td>Minh chứng</td>
+                                          <td>Nội dung đánh giá</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="my-paging mt-20">
+                                    <div class="my-paging_static">
+                                      1 đến 10 trong 1210 dữ liệu
+                                    </div>
+                                    <div class="my-paging_quantity">
+                                      <span>Hiển thị</span>
+                                      <div class="input-wrap">
+                                        <select
+                                          name=""
+                                          id=""
+                                          class="form-select"
+                                        >
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                        </select>
+                                        <i
+                                          class="fa-light fa-chevron-down icon-end"
+                                        ></i>
+                                      </div>
+                                    </div>
+                                    <ul class="my-paging_wrap">
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-left"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                      <li><a class="active" href="">1</a></li>
+                                      <li><a href="">2</a></li>
+                                      <li><a href="">3</a></li>
+                                      <li><a href="">4</a></li>
+                                      <li><a href="">5</a></li>
+                                      <li><a href="">...</a></li>
+                                      <li><a href="">101</a></li>
+                                      <li><a href="">102</a></li>
+                                      <li><a href="">103</a></li>
+                                      <li><a href="">104</a></li>
+                                      <li><a href="">105</a></li>
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-right"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="myTab-item" id="congviectrongtuan">
+                                <div class="table-wrap">
+                                  <div class="table-responsive fs-14 no-swiper">
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th
+                                            class="text-center py-11 border-top-1"
+                                            scope="col"
+                                          >
+                                            STT
+                                          </th>
+                                          <th
+                                            class="min-w-200p border-top-1"
+                                            scope="col"
+                                          >
+                                            Đầu việc được giao
+                                          </th>
+                                          <th
+                                            class="min-w-200p border-top-1"
+                                            scope="col"
+                                          >
+                                            Cá nhân thực hiện báo cáo
+                                          </th>
+                                          <th
+                                            class="min-w-110p border-top-1"
+                                            scope="col"
+                                          >
+                                            Minh chứng
+                                          </th>
+                                          <th
+                                            class="min-w-150p border-top-1"
+                                            scope="col"
+                                          >
+                                            Nhận xét / Đánh giá
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >1</span
+                                            >
+                                          </td>
+                                          <td>Đầu việc được giao</td>
+                                          <td>Trần Thế Bảo</td>
+                                          <td>Minh chứng</td>
+                                          <td>Nội dung đánh giá</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="my-paging mt-20">
+                                    <div class="my-paging_static">
+                                      1 đến 10 trong 1210 dữ liệu
+                                    </div>
+                                    <div class="my-paging_quantity">
+                                      <span>Hiển thị</span>
+                                      <div class="input-wrap">
+                                        <select
+                                          name=""
+                                          id=""
+                                          class="form-select"
+                                        >
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                        </select>
+                                        <i
+                                          class="fa-light fa-chevron-down icon-end"
+                                        ></i>
+                                      </div>
+                                    </div>
+                                    <ul class="my-paging_wrap">
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-left"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                      <li><a class="active" href="">1</a></li>
+                                      <li><a href="">2</a></li>
+                                      <li><a href="">3</a></li>
+                                      <li><a href="">4</a></li>
+                                      <li><a href="">5</a></li>
+                                      <li><a href="">...</a></li>
+                                      <li><a href="">101</a></li>
+                                      <li><a href="">102</a></li>
+                                      <li><a href="">103</a></li>
+                                      <li><a href="">104</a></li>
+                                      <li><a href="">105</a></li>
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-right"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="myTab-item"
+                                id="congviectrongthang_nam"
+                              >
+                                <!-- filter -->
+                                <div
+                                  class="filter-contract"
+                                  style="max-width: 660px"
+                                >
+                                  <div class="input-gr row gap-0 row-gap-3">
+                                    <div class="col-12 col-md-6">
+                                      <div class="input-label-left">
+                                        <label class="mt-5 w-auto">Năm</label>
+                                        <div class="custom-select">
+                                          <select
+                                            name=""
+                                            id=""
+                                            class="form-select"
+                                          >
+                                            <option value="">Chọn năm</option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                          </select>
+                                          <i
+                                            class="fa-light fa-chevron-down"
+                                          ></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                      <div class="input-label-left">
+                                        <label class="mt-5 w-auto">Tháng</label>
+                                        <div class="custom-select">
+                                          <select
+                                            name=""
+                                            id=""
+                                            class="form-select"
+                                          >
+                                            <option value="">Chọn tháng</option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                            <option value="">
+                                              Chọn thời gian
+                                            </option>
+                                          </select>
+                                          <i
+                                            class="fa-light fa-chevron-down"
+                                          ></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btn btn-view">Xem danh sách</div>
+                                </div>
+                                <div class="table-wrap">
+                                  <div class="table-responsive fs-14 no-swiper">
+                                    <table class="table table-custom">
+                                      <thead>
+                                        <tr>
+                                          <th
+                                            class="text-center w-52p py-11"
+                                            scope="col"
+                                          >
+                                            Tháng
+                                          </th>
+                                          <th class="text-center" scope="col">
+                                            STT
+                                          </th>
+                                          <th class="min-w-300p" scope="col">
+                                            Đầu việc được giao
+                                          </th>
+                                          <th class="min-w-200p" scope="col">
+                                            Cá nhân thực hiện báo cáo
+                                          </th>
+                                          <th class="min-w-110p" scope="col">
+                                            Minh chứng
+                                          </th>
+                                          <th class="min-w-150p" scope="col">
+                                            Nhận xét / Đánh giá
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            class="text-center thang1"
+                                            rowspan="2"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                              1</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                              1</span
+                                            >
+                                          </td>
+                                          <td>Đầu việc được giao</td>
+                                          <td>Trần Thế Bảo</td>
+                                          <td>Minh chứng</td>
+                                          <td>Nội dung đánh giá</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                              1</span
+                                            >
+                                          </td>
+                                          <td>Đầu việc được giao</td>
+                                          <td>Trần Thế Bảo</td>
+                                          <td>Minh chứng</td>
+                                          <td>Nội dung đánh giá</td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang2"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >2</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang3"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >3</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang4"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                              4</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang5"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >5</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang6"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >6</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang7"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >7</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang8"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >8</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang9"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >9</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang10"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >10</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang11"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >11</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            class="text-center thang12"
+                                            rowspan="1"
+                                          >
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >12</span
+                                            >
+                                          </td>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                            >
+                                            </span>
+                                          </td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="my-paging mt-20">
+                                    <div class="my-paging_static">
+                                      1 đến 10 trong 1210 dữ liệu
+                                    </div>
+                                    <div class="my-paging_quantity">
+                                      <span>Hiển thị</span>
+                                      <div class="input-wrap">
+                                        <select
+                                          name=""
+                                          id=""
+                                          class="form-select"
+                                        >
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                        </select>
+                                        <i
+                                          class="fa-light fa-chevron-down icon-end"
+                                        ></i>
+                                      </div>
+                                    </div>
+                                    <ul class="my-paging_wrap">
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-left"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                      <li><a class="active" href="">1</a></li>
+                                      <li><a href="">2</a></li>
+                                      <li><a href="">3</a></li>
+                                      <li><a href="">4</a></li>
+                                      <li><a href="">5</a></li>
+                                      <li><a href="">...</a></li>
+                                      <li><a href="">101</a></li>
+                                      <li><a href="">102</a></li>
+                                      <li><a href="">103</a></li>
+                                      <li><a href="">104</a></li>
+                                      <li><a href="">105</a></li>
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-right"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- VAI TRÒ -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="box-shadow">
+                  <div class="function">
+                    <div class="function-content">
+                      <div class="feature-content has-tabs">
+                        <div class="card today-card today-card-1 mb-40">
+                          <div class="card-header">
+                            <div class="myTab-header">
+                              <div class="myTab-header-item">
+                                <a
+                                  href="#"
+                                  class="myTab-header-link active"
+                                  data-myTab="cacvaitro"
+                                >
+                                  Các vai trò - quyền đang sử dụng
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-body">
+                            <div class="myTab-content">
+                              <div class="myTab-item show" id="cacvaitro">
+                                <div class="table-wrap">
+                                  <div class="table-responsive fs-14 no-swiper">
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th
+                                            class="text-center border-top-1 py-11"
+                                            scope="col"
+                                          >
+                                            STT
+                                          </th>
+                                          <th
+                                            class="min-w-100p border-top-1"
+                                            scope="col"
+                                          >
+                                            vai trò
+                                          </th>
+                                          <th
+                                            class="min-w-150p border-top-1"
+                                            scope="col"
+                                          >
+                                            Chức năng
+                                          </th>
+                                          <th
+                                            class="min-w-110p border-top-1"
+                                            scope="col"
+                                          >
+                                            ghi chú
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">
+                                            <span
+                                              class="d-flex align-items-center min-h-28p justify-content-center"
+                                              >1</span
+                                            >
+                                          </td>
+                                          <td>Vai trò</td>
+                                          <td>
+                                            Phối hợp với gia đình học sinh, sinh
+                                            viên và các tổ chức khác trong công
+                                            tác giáo dụ
+                                          </td>
+                                          <td>Ghi chú</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="my-paging mt-20">
+                                    <div class="my-paging_static">
+                                      1 đến 10 trong 1210 dữ liệu
+                                    </div>
+                                    <div class="my-paging_quantity">
+                                      <span>Hiển thị</span>
+                                      <div class="input-wrap">
+                                        <select
+                                          name=""
+                                          id=""
+                                          class="form-select"
+                                        >
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                          <option value="">10</option>
+                                        </select>
+                                        <i
+                                          class="fa-light fa-chevron-down icon-end"
+                                        ></i>
+                                      </div>
+                                    </div>
+                                    <ul class="my-paging_wrap">
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-left"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                      <li><a class="active" href="">1</a></li>
+                                      <li><a href="">2</a></li>
+                                      <li><a href="">3</a></li>
+                                      <li><a href="">4</a></li>
+                                      <li><a href="">5</a></li>
+                                      <li><a href="">...</a></li>
+                                      <li><a href="">101</a></li>
+                                      <li><a href="">102</a></li>
+                                      <li><a href="">103</a></li>
+                                      <li><a href="">104</a></li>
+                                      <li><a href="">105</a></li>
+                                      <li>
+                                        <a href=""
+                                          ><i
+                                            class="fa-light fa-chevron-right"
+                                          ></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TRAO ĐỔI RIÊNG -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="box-shadow traodoirieng-page">
+                  <div class="function">
+                    <div class="user-chat">
+                      <div class="user-chat-nav">
+                        <div class="user-chat-top">
+                          <div class="search">
+                            <input
+                              type="text"
+                              placeholder="Tìm kiếm thông tin"
+                            />
+                            <button><i class="fa-light fa-search"></i></button>
+                          </div>
+                          <button>
+                            <i class="fa-light fa-contact-book"></i>
+                          </button>
+                          <button>
+                            <i class="fa-light fa-users-medical"></i>
+                          </button>
+                        </div>
+
+                        <div class="user-tb-list user-chat-list">
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button
+                                class="nav-link active"
+                                id="home-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#home"
+                                type="button"
+                                role="tab"
+                                aria-controls="home"
+                                aria-selected="true"
+                              >
+                                Cá nhân
+                              </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button
+                                class="nav-link"
+                                id="profile-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#profile"
+                                type="button"
+                                role="tab"
+                                aria-controls="profile"
+                                aria-selected="false"
+                                tabindex="-1"
+                              >
+                                Nhóm
+                              </button>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div
+                              class="tab-pane fade show active"
+                              id="home"
+                              role="tabpanel"
+                              aria-labelledby="home-tab"
+                            >
+                              <div class="user-chat-list">
+                                <div class="user-chat-item online">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <div class="bottom">
+                                      <p class="m-0">
+                                        Bạn: Ko bạn mình sẽ gửi thông tin cho
+                                        bạn
+                                      </p>
+                                      <div class="count-action">
+                                        <div class="dropdown">
+                                          <div
+                                            class="item"
+                                            data-bs-toggle="dropdown"
+                                          >
+                                            <i class="fal fa-ellipsis"></i>
+                                          </div>
+                                          <ul class="dropdown-menu">
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-thumb-tack"
+                                                ></i>
+                                                <span>Ghim trò chuyện</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-message-check"
+                                                ></i>
+                                                <span>Đánh dấu đã đọc</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i class="fa-light fa-user"></i>
+                                                <span>Xem trang cá nhân</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-bell-slash"
+                                                ></i>
+                                                <span>Tắt thông báo</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-eye-slash"
+                                                ></i>
+                                                <span>Ẩn trò chuyện</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-trash"
+                                                ></i>
+                                                <span>Xóa trò chuyện</span>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="count">
+                                          <span class="item">5+</span>
+                                          <i
+                                            class="item fa-solid fa-thumb-tack"
+                                          ></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item reader">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <div class="bottom">
+                                      <p class="m-0">
+                                        Bạn: Ko bạn mình sẽ gửi thông tin cho
+                                        bạn
+                                      </p>
+                                      <div class="count-action">
+                                        <div class="dropdown">
+                                          <div
+                                            class="item"
+                                            data-bs-toggle="dropdown"
+                                          >
+                                            <i class="fal fa-ellipsis"></i>
+                                          </div>
+                                          <ul class="dropdown-menu">
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-thumb-tack"
+                                                ></i>
+                                                <span>Ghim trò chuyện</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-message-check"
+                                                ></i>
+                                                <span>Đánh dấu đã đọc</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i class="fa-light fa-user"></i>
+                                                <span>Xem trang cá nhân</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-bell-slash"
+                                                ></i>
+                                                <span>Tắt thông báo</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-eye-slash"
+                                                ></i>
+                                                <span>Ẩn trò chuyện</span>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a class="dropdown-item" href="#">
+                                                <i
+                                                  class="fa-light fa-trash"
+                                                ></i>
+                                                <span>Xóa trò chuyện</span>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                        <div class="count">
+                                          <i
+                                            class="item fa-solid fa-thumb-tack"
+                                          ></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="user-chat-item">
+                                  <div class="avatar">
+                                    <img
+                                      src="../assets/images/avatar.jpg"
+                                      alt=""
+                                    />
+                                    <span class="user-chat-status"></span>
+                                  </div>
+                                  <div class="user-chat-meta">
+                                    <div class="top">
+                                      <div class="user-chat-name">
+                                        Hoàng mai hương
+                                      </div>
+                                      <div class="user-chat-time">
+                                        01:10 20/2/2024
+                                      </div>
+                                    </div>
+                                    <p class="m-0">
+                                      Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="profile"
+                              role="tabpanel"
+                              aria-labelledby="profile-tab"
+                            >
+                              gfg
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user-chat-cont-wrap">
+                        <div class="user-chat-cont">
+                          <div class="user-chat-cont-top">
+                            <div class="user-chat-item reader">
+                              <div class="avatar">
+                                <img src="../assets/images/avatar.jpg" alt="" />
+                                <span class="user-chat-status"></span>
+                              </div>
+                              <div class="user-chat-meta">
+                                <div class="top">
+                                  <div class="user-chat-name">
+                                    Hoàng mai hương
+                                  </div>
+                                </div>
+                                <p class="m-0">
+                                  Bạn: Ko bạn mình sẽ gửi thông tin cho bạn
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="user-chat-body">
+                            <div class="chat-date-wrap">
+                              <div class="date">
+                                <span>12:10 - 12/09/2022</span>
+                              </div>
+                              <div class="user-chatting">
+                                <div class="avatar">
+                                  <img
+                                    src="../assets/images/avatar.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="user-chatting-content">
+                                  <div class="user-chatting-row">
+                                    Chào bạn, chúng tôi có thể giúp gì được cho
+                                    bạn?
+                                  </div>
+                                  <div class="user-chatting-row">
+                                    Em chào Anh/chị, mình đang cần hỗ trợ vấn đề
+                                    gì ạ?
+                                  </div>
+                                  <div class="user-chatting-row">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Optio quos omnis eligendi,
+                                    sapiente est veniam ut dolores quia quasi
+                                    error modi deserunt repellat soluta earum
+                                    labore voluptatum magni, animi praesentium.
+                                  </div>
+                                  <div class="user-chatting-name-date">
+                                    Ngocbich - 12:00
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="my-chatting">
+                                <div class="my-chatting-row">ok bạn!</div>
+                                <div class="my-chatting-row">
+                                  Lorem ipsum dolor, sit amet consectetur
+                                  adipisicing elit. Excepturi illum esse quas
+                                  odit? Natus magnam cum voluptatum officiis
+                                  officia quibusdam consequuntur laborum
+                                  sapiente aperiam accusamus nostrum
+                                  exercitationem, incidunt necessitatibus
+                                  cumque.
+                                </div>
+                                <div class="user-chatting-name-date">12:00</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-typing">
+                            <div class="input-text">
+                              <input
+                                type="text"
+                                placeholder="Nhập tin nhắn, @"
+                              />
+                              <button>
+                                <i class="fa-light fa-paper-plane-top"></i>
+                              </button>
+                            </div>
+                            <button class="input-typing-icon">
+                              <i class="fal fa-smile"></i>
+                            </button>
+                            <button class="input-typing-icon">
+                              <i class="fal fa-image-polaroid"></i>
+                            </button>
+                            <button class="input-typing-icon">
+                              <i class="fal fa-paperclip"></i>
+                            </button>
+                            <button class="input-typing-icon">
+                              <i class="fal fa-ellipsis-h"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../assets/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+    <script src="../assets/swiper-slide/swiper-bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="../assets/js/customs.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const allRows = Array.from(
+          document.querySelectorAll(".table-custom tr")
+        );
+
+        allRows.forEach((row, rowIndex) => {
+          const td = row.querySelector("td[rowspan]");
+          if (td) {
+            const span = parseInt(td.getAttribute("rowspan"), 10);
+            const targetRowIndex = rowIndex + span - 1;
+
+            if (allRows[targetRowIndex]) {
+              allRows[targetRowIndex].classList.add("last-row-in-group");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

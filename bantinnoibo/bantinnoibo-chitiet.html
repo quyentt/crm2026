@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhân sự</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="header fixed-top">
+      <div class="top-nav">
+        <div class="sidebar-bars">
+          <i class="fa-light fa-bars-sort"> </i>
+        </div>
+        <div class="head-logo">
+          <a href="../index.html">
+            <img class="logo-icon" src="../assets/images/logo/logo-icon.png" />
+            <img class="logo-text" src="../assets/images/logo/logo-text.png" />
+          </a>
+        </div>
+        <div class="head-search-form">
+          <div class="head-search-toggle">
+            <i class="fal fa-search"></i>
+          </div>
+          <div class="head-search-box">
+            <div class="form">
+              <input
+                type="text"
+                class="search-imput"
+                placeholder="Tìm kiếm thông tin"
+              />
+              <button class="search-btn">
+                <i class="fal fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main-menu">
+          <ul class="list-unstyled">
+            <li class="item">
+              <a class="menu-link" href="../index.html">
+                <i class="fal fa-home"></i>
+                <span>Trang chủ</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../dashboard.html">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../modul.html">
+                <span>Modul</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../chucnang-cuaban.html">
+                <span>Chức năng của bạn</span>
+              </a>
+            </li>
+            <li class="item">
+              <a class="menu-link" href="../tintuc.html">
+                <span>Tin tức</span>
+              </a>
+            </li>
+          </ul>
+          <div class="menu-toggle">
+            <i class="fal fa-bars"></i>
+          </div>
+        </div>
+        <div class="account-group">
+          <div class="dropdown">
+            <div class="item" data-bs-toggle="dropdown">
+              <i class="fal fa-circle-check"></i>
+              <span>3</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item message" data-bs-toggle="dropdown">
+              <i class="fal fa-messages"></i>
+              <span>3</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item noti" data-bs-toggle="dropdown">
+              <i class="fal fa-bell"></i>
+              <span>9+</span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="item" data-bs-toggle="dropdown">
+              <img src="../assets/images/avatar.jpg" class="avatar" />
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-wrap">
+      <div class="left-sidebar">
+        <div class="sidebar-menu">
+          <div class="accordion" id="sidebar-menu">
+            <div class="sidebar-menu-item">
+              <a class="sidebar-menu-header collapsed" href="">
+                <i class="fa-light fa-house-window item-icon"></i>
+                <span>Dashboads</span>
+              </a>
+            </div>
+            <!-- siderbar menu  item -->
+            <div class="sidebar-menu-item">
+              <a
+                class="sidebar-menu-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                href="javascrip:void(0)"
+                aria-expanded="true"
+              >
+                <i class="fa-light fa-chalkboard-user item-icon"></i>
+                <span>Giảng viên</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse"
+                id="collapse1"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a class="" href="#">Thông tin chung</a>
+                  <a href="#">Nhập điểm theo lớp học phần</a>
+                  <a href="#">Điểm danh theo lớp học phần</a>
+                  <a href="#">Tra cứu hồ sơ sinh viên</a>
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+            <!-- siderbar menu  item -->
+            <div class="sidebar-menu-item">
+              <a
+                class="sidebar-menu-header collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                href="javascrip:void(0)"
+              >
+                <i class="fa-light fa-building-user item-icon"> </i>
+                <span>Trưởng khoa</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse"
+                id="collapse2"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a href="#">Profile demo 1</a>
+                  <a href="#">Profile demo 2</a>
+                  <a href="#">Profile demo 3</a>
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+            <div class="sidebar-menu-item active">
+              <a
+                class="sidebar-menu-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+                href="javascrip:void(0)"
+              >
+                <i class="fa-light fa-users-gear item-icon"></i>
+                <span>Nhân sự</span>
+                <i class="fal fa-chevron-right item-arrow-icon"></i>
+                <i class="fal fa-chevron-down item-arrow-icon down"></i>
+              </a>
+              <div
+                class="sidebar-menu-sub collapse show"
+                id="collapse3"
+                data-bs-parent="#sidebar-menu"
+              >
+                <div class="sidebar-menu-sub-content">
+                  <a
+                    class="active"
+                    href="nhansu/nhansu-chitiet.html"
+                    data-position="0"
+                    >Kế hoạch tuyển dụng</a
+                  >
+                  <a href="nhansu/nhansu-chitiet.html" data-position="1"
+                    >Đề xuất tuyển dụng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- end siderbar menu  item -->
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="quick-action tabs-slider">
+          <div class="tab-title">
+            <span>Bản tin nội bộ</span>
+            <div class="title-breadcumb">/ Thông báo</div>
+          </div>
+          <div class="tab-list swiper label-slider auto-width-slider">
+            <div class="swiper-wrapper">
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-solid fa-flag-swallowtail"></i>
+                  <p>Thông báo</p>
+                </a>
+              </div>
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-regular fa-newspaper"></i>
+                  <p>Sự kiện</p>
+                </a>
+              </div>
+              <div class="tab-item swiper-slide">
+                <a href="javascript:void(0)">
+                  <i class="fa-regular fa-chalkboard-user"></i>
+                  <p>Tin giảng viên</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper content-slider">
+          <div class="swiper-wrapper">
+            <!-- THÔNG BÁO -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="post-page box-shadow">
+                  <div class="row">
+                    <div class="col-12 col-lg-4">
+                      <div class="post-list-block">
+                        <div class="post-list-block-title">
+                          <span>Danh sách thông báo</span>
+                          <div class="input input-icon-right">
+                            <input size="1" type="text" class="form-control" />
+                            <i
+                              class="fa-light fa-calendar-day calendar-icon"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="post-list-block-list">
+                          <div class="item active">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                          <div class="item item-readed">
+                            <a href="#" class="link">
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính)
+                            </a>
+                            <div class="date">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                          <div class="post-paging">
+                            <a href="#" class="">
+                              <i class="fa-light fa-chevron-double-left"></i>
+                            </a>
+                            <a href="#" class="">
+                              <i class="fa-light fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="active"> 1 </a>
+                            <a href="#" class=""> 2 </a>
+                            <a href="#" class=""> 3 </a>
+                            <a href="#" class=""> 4 </a>
+                            <a href="#" class=""> 5 </a>
+                            <a href="#" class="">
+                              <i class="fa-light fa-chevron-right"></i>
+                            </a>
+                            <a href="#" class="">
+                              <i class="fa-light fa-chevron-double-right"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                      <div class="post-content">
+                        <div class="aticle-detail">
+                          <div class="title">
+                            Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                            Thông Tin - Khoa học máy tính)
+                          </div>
+                          <div class="meta">
+                            <div class="item">
+                              <i class="fa-light fa-calendar-clock"></i>
+                              <span>22/05/2025</span>
+                            </div>
+                            <div class="item">
+                              <i class="fa-light fa-eye"></i>
+                              <span>2.264 lượt xem</span>
+                            </div>
+                            <div class="item">
+                              <i class="fa-light fa-messages"></i>
+                              <span>2.264 bình luận</span>
+                            </div>
+
+                            <a href="#" class="item">
+                              <i class="fa-light fa-user"></i>
+                              <span>Phòng truyền thông</span>
+                            </a>
+                          </div>
+                          <div class="acticle-content">
+                            <p>
+                              <b>
+                                Thay đổi thời khóa biểu học kỳ hè ( Khóa Công
+                                Nghệ Thông Tin - Khoa học máy tính). Thay đổi
+                                thời khóa biểu học kỳ hè ( Khóa Công Nghệ Thông
+                                Tin - Khoa học máy tính)
+                              </b>
+                            </p>
+                            <p>
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính). Thay đổi thời khóa
+                              biểu học kỳ hè ( Khóa Công Nghệ Thông Tin - Khoa
+                              học máy tính)
+                            </p>
+                            <p>
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính). Thay đổi thời khóa
+                              biểu học kỳ hè ( Khóa Công Nghệ Thông Tin - Khoa
+                              học máy tính)
+                            </p>
+                            <p>
+                              Thay đổi thời khóa biểu học kỳ hè ( Khóa Công Nghệ
+                              Thông Tin - Khoa học máy tính). Thay đổi thời khóa
+                              biểu học kỳ hè ( Khóa Công Nghệ Thông Tin - Khoa
+                              học máy tính)
+                            </p>
+                          </div>
+                        </div>
+                        <div class="post-comment">
+                          <div class="post-comment-statistics">
+                            <div class="label">
+                              Bài viết hay? Ấn để tương tác
+                            </div>
+                            <div class="list">
+                              <a href="#" class="item">
+                                <img
+                                  src="../assets/images/comment-emoji/1.png"
+                                  alt=""
+                                />
+                                <span>150</span>
+                              </a>
+                              <a href="#" class="item">
+                                <img
+                                  src="../assets/images/comment-emoji/1.png"
+                                  alt=""
+                                />
+                                <span>150</span>
+                              </a>
+                              <a href="#" class="item">
+                                <img
+                                  src="../assets/images/comment-emoji/1.png"
+                                  alt=""
+                                />
+                                <span>150</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="post-comment-box">
+                            <div class="form">
+                              <div class="label">
+                                <img
+                                  src="../assets/images/commet-label.svg"
+                                  alt=""
+                                />
+                                <span>Ý kiến  (2)</span>
+                              </div>
+                              <textarea
+                                class="form-control"
+                                id="exampleFormControlTextarea1"
+                                rows="3"
+                                placeholder="Chia sẻ ý kiến của bạn"
+                              ></textarea>
+                              <div class="d-flex justify-content-end">
+                                <button class="btn btn-link">Gửi ý kiến</button>
+                              </div>
+                            </div>
+                            <div class="post-comment-list">
+                              <div class="post-comment-item">
+                                <div class="icon">H</div>
+                                <div class="posst-comment-content">
+                                  <div class="comment-text">
+                                    <a class="home-name" href="#">Hiền Lưu</a> -
+                                    Rất tốt. Trường Đại học thông báo Thời khóa
+                                    biểu lớp học bổ sung kiến thức ngành Khoa
+                                    học máy tính và Khoa học vật liệu năm 2025
+                                  </div>
+                                  <div class="post-comment-meta">
+                                    <a href="#" class="item">
+                                      <i class="fa-light fa-thumbs-up"></i>
+                                      <span>Thích (20)</span>
+                                    </a>
+                                    <a href="#" class="item">
+                                      <i class="fa-light fa-reply-all"></i>
+                                      <span>Trả lời (5)</span>
+                                    </a>
+                                    <div class="item">
+                                      <i class="fa-light fa-calendar-clock"></i>
+                                      <span>5h trước</span>
+                                    </div>
+                                  </div>
+                                  <div class="comment-reply">
+                                    <div class="comment-reply-item">
+                                      <div class="icon">H</div>
+                                      <div class="posst-comment-content">
+                                        <div class="comment-text">
+                                          <div class="users-name">
+                                            <a class="home-name" href="#"
+                                              >Hiền Lưu</a
+                                            >
+                                            <i
+                                              class="fa-light fa-arrow-right"
+                                            ></i>
+                                            <a class="guest-name" href="#">
+                                              Trần Bảo</a
+                                            >
+                                          </div>
+                                          - Rất tốt. Trường Đại học thông báo
+                                          Thời khóa biểu lớp học bổ sung kiến
+                                          thức ngành Khoa học máy tính và Khoa
+                                          học vật liệu năm 2025
+                                        </div>
+                                        <div class="post-comment-meta">
+                                          <a href="#" class="item">
+                                            <i
+                                              class="fa-light fa-thumbs-up"
+                                            ></i>
+                                            <span>Thích (20)</span>
+                                          </a>
+                                          <a href="#" class="item">
+                                            <i
+                                              class="fa-light fa-reply-all"
+                                            ></i>
+                                            <span>Trả lời (5)</span>
+                                          </a>
+                                          <div class="item">
+                                            <i
+                                              class="fa-light fa-calendar-clock"
+                                            ></i>
+                                            <span>5h trước</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="comment-reply-item">
+                                      <div class="icon">H</div>
+                                      <div class="posst-comment-content">
+                                        <div class="comment-text">
+                                          <a class="home-name" href="#"
+                                            >Hiền Lưu</a
+                                          >
+                                          - Rất tốt. Trường Đại học thông báo
+                                          Thời khóa biểu lớp học bổ sung kiến
+                                          thức ngành Khoa học máy tính và Khoa
+                                          học vật liệu năm 2025
+                                        </div>
+                                        <div class="post-comment-meta">
+                                          <a href="#" class="item">
+                                            <i
+                                              class="fa-light fa-thumbs-up"
+                                            ></i>
+                                            <span>Thích (20)</span>
+                                          </a>
+                                          <a href="#" class="item">
+                                            <i
+                                              class="fa-light fa-reply-all"
+                                            ></i>
+                                            <span>Trả lời (5)</span>
+                                          </a>
+                                          <div class="item">
+                                            <i
+                                              class="fa-light fa-calendar-clock"
+                                            ></i>
+                                            <span>5h trước</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-start mt-30">
+                            <div class="post-paging">
+                              <a href="#" class="">
+                                <i class="fa-light fa-chevron-double-left"></i>
+                              </a>
+                              <a href="#" class="">
+                                <i class="fa-light fa-chevron-left"></i>
+                              </a>
+                              <a href="#" class="active"> 1 </a>
+                              <a href="#" class=""> 2 </a>
+                              <a href="#" class=""> 3 </a>
+                              <a href="#" class=""> 4 </a>
+                              <a href="#" class=""> 5 </a>
+                              <a href="#" class="">
+                                <i class="fa-light fa-chevron-right"></i>
+                              </a>
+                              <a href="#" class="">
+                                <i class="fa-light fa-chevron-double-right"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SỰ KIỆN -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="box-shadow">Sự kiện</div>
+              </div>
+            </div>
+            <!-- TIN GIẢNG VIÊN -->
+            <div class="swiper-slide">
+              <div class="post-page-wrap">
+                <div class="box-shadow">Tin giảng viên</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../assets/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+    <script src="../assets/swiper-slide/swiper-bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="../assets/js/customs.js"></script>
+  </body>
+</html>
