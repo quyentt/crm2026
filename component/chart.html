@@ -172,6 +172,15 @@
               <div class="my-100">
                 <canvas id="bieudomoi" width="800" height="400"></canvas>
               </div>
+              <div class="my-100">
+                <canvas id="bieudoGPA" width="800" height="400"></canvas>
+              </div>
+              <div class="my-100">
+                <canvas id="quymotoantruong" width="800" height="400"></canvas>
+              </div>
+              <div class="my-100">
+                <canvas id="xuhuongthuhocphi" width="800" height="400"></canvas>
+              </div>
             </div>
           </div>
         </div>
@@ -830,6 +839,351 @@
             y: {
               beginAtZero: true,
               grid: { color: "#eee" },
+            },
+            x: {
+              grid: { display: false },
+            },
+          },
+        },
+      });
+      //Biểu đồ GPA
+      const khoaData = {
+        labels: ["Khoa A", "Khoa B", "Khoa C", "Khoa D", "Khoa E"],
+
+        gpa: [3.5, 3.2, 3.3, 2.9, 2.8],
+        tyLeDo: [95, 92, 93, 85, 80],
+
+        rankGPA: {
+          "Khoa A": "1/5 khoa",
+          "Khoa B": "3/5 khoa",
+          "Khoa C": "2/5 khoa",
+          "Khoa D": "4/5 khoa",
+          "Khoa E": "5/5 khoa",
+        },
+
+        rankDo: {
+          "Khoa A": "1/5 khoa",
+          "Khoa B": "2/5 khoa",
+          "Khoa C": "3/5 khoa",
+          "Khoa D": "4/5 khoa",
+          "Khoa E": "5/5 khoa",
+        },
+      };
+      const ctx = document.getElementById("bieudoGPA");
+
+      const chartGPA = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: khoaData.labels,
+          datasets: [
+            {
+              type: "bar",
+              label: "GPA trung bình",
+              data: khoaData.gpa,
+              backgroundColor: "rgba(140, 82, 255, .6)",
+              borderRadius: 6,
+              barPercentage: 0.5,
+              categoryPercentage: 0.6,
+              yAxisID: "y",
+            },
+            {
+              type: "line",
+              label: "Tỷ lệ đỗ (%)",
+              data: khoaData.tyLeDo,
+              borderColor: "#E63946",
+              backgroundColor: "rgba(230, 57, 70, .2)",
+              borderWidth: 3,
+              tension: 0.4,
+              yAxisID: "y1",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+
+          plugins: {
+            title: {
+              display: true,
+              text: "GPA TRUNG BÌNH / TỶ LỆ ĐỖ THEO KHOA",
+              font: { size: 26 },
+              padding: { top: 10, bottom: 20 },
+            },
+
+            tooltip: {
+              backgroundColor: "#fff",
+              titleColor: "#222",
+              bodyColor: "#222",
+              borderColor: "#ccc",
+              borderWidth: 1,
+              padding: 12,
+
+              callbacks: {
+                title(context) {
+                  return context[0].label;
+                },
+                label(context) {
+                  const khoa = context.label;
+                  return [
+                    `GPA TB: ${khoaData.gpa[context.dataIndex]}`,
+                    `Tỷ lệ đỗ: ${khoaData.tyLeDo[context.dataIndex]}%`,
+                    `Xếp hạng GPA: ${khoaData.rankGPA[khoa]}`,
+                    `Xếp hạng tỷ lệ đỗ: ${khoaData.rankDo[khoa]}`,
+                  ];
+                },
+              },
+            },
+
+            legend: {
+              labels: {
+                padding: 20,
+                boxWidth: 14,
+                boxHeight: 14,
+                useBorderRadius: true,
+                borderRadius: 3,
+              },
+            },
+          },
+
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 4,
+              title: { display: true, text: "GPA" },
+              grid: { color: "#eee" },
+            },
+            y1: {
+              position: "right",
+              beginAtZero: true,
+              max: 100,
+              title: { display: true, text: "Tỷ lệ đỗ (%)" },
+              grid: { drawOnChartArea: false },
+            },
+            x: {
+              grid: { display: false },
+            },
+          },
+
+          // 🔽 DRILL-DOWN
+          onClick(evt, elements) {
+            if (!elements.length) return;
+
+            const index = elements[0].index;
+            const khoa = khoaData.labels[index];
+
+            // Ví dụ chuyển dashboard
+            window.location.href = `/dashboard-lanh-dao?khoa=${encodeURIComponent(
+              khoa
+            )}`;
+          },
+        },
+      });
+      //Biểu đồ quy mô toàn trường
+      const quyMoData = {
+        labels: ["2021", "2022", "2023", "2024", "2025"],
+        svNhapMoi: [2000, 3500, 6000, 8000, 12000],
+        svDangHoc: [6000, 11000, 17000, 24000, 32000],
+        svTotNghiep: [500, 800, 1000, 1200, 1500],
+      };
+      const ctx1 = document.getElementById("quymotoantruong");
+
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: quyMoData.labels,
+          datasets: [
+            {
+              label: "SV nhập mới",
+              data: quyMoData.svNhapMoi,
+              borderColor: "#3B6FD8",
+              backgroundColor: "rgba(59, 111, 216, .15)",
+              borderWidth: 3,
+              tension: 0.4,
+              pointRadius: 4,
+              fill: false,
+            },
+            {
+              label: "SV đang học",
+              data: quyMoData.svDangHoc,
+              borderColor: "#E63946",
+              backgroundColor: "rgba(230, 57, 70, .15)",
+              borderWidth: 3,
+              tension: 0.4,
+              pointRadius: 4,
+              fill: false,
+            },
+            {
+              label: "SV tốt nghiệp",
+              data: quyMoData.svTotNghiep,
+              borderColor: "#7AC943",
+              backgroundColor: "rgba(122, 201, 67, .2)",
+              borderWidth: 3,
+              tension: 0.4,
+              pointRadius: 4,
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+
+          plugins: {
+            title: {
+              display: true,
+              text: "QUY MÔ TOÀN TRƯỜNG",
+              font: { size: 24 },
+              padding: { top: 10, bottom: 20 },
+            },
+
+            tooltip: {
+              backgroundColor: "#fff",
+              titleColor: "#222",
+              bodyColor: "#222",
+              borderColor: "#ccc",
+              borderWidth: 1,
+              padding: 12,
+              callbacks: {
+                label(context) {
+                  return `${
+                    context.dataset.label
+                  }: ${context.parsed.y.toLocaleString()} SV`;
+                },
+              },
+            },
+
+            legend: {
+              labels: {
+                padding: 25,
+                boxWidth: 14,
+                boxHeight: 14,
+                useBorderRadius: true,
+                borderRadius: 3,
+              },
+            },
+          },
+
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback(value) {
+                  return value.toLocaleString();
+                },
+              },
+              grid: { color: "#eee" },
+            },
+            x: {
+              grid: { display: false },
+            },
+          },
+        },
+      });
+      //Biểu đồ xu hướng thu học phí
+      const hocPhiData = {
+        labels: ["Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+
+        daThu: [45, 70, 90, 110, 125],
+        mucTieu: [50, 80, 95, 115, 130],
+        tyLeThu: [35, 70, 85, 95, 90],
+      };
+      const ctx2 = document.getElementById("xuhuongthuhocphi");
+
+      new Chart(ctx2, {
+        data: {
+          labels: hocPhiData.labels,
+          datasets: [
+            {
+              type: "bar",
+              label: "Đã thu (tỷ)",
+              data: hocPhiData.daThu,
+              backgroundColor: "rgba(59, 111, 216, .7)",
+              borderRadius: 6,
+
+              barPercentage: 0.45,
+              categoryPercentage: 0.6,
+            },
+            {
+              type: "line",
+              label: "Mục tiêu (tỷ)",
+              data: hocPhiData.mucTieu,
+              borderColor: "#7AC943",
+              backgroundColor: "rgba(122, 201, 67, .2)",
+              borderWidth: 3,
+              tension: 0.4,
+              pointRadius: 4,
+              yAxisID: "y",
+            },
+            {
+              type: "line",
+              label: "Tỷ lệ thu (%)",
+              data: hocPhiData.tyLeThu,
+              borderColor: "#E63946",
+              borderWidth: 3,
+              tension: 0.4,
+              pointRadius: 4,
+              yAxisID: "y1",
+            },
+          ],
+        },
+
+        options: {
+          responsive: true,
+
+          plugins: {
+            title: {
+              display: true,
+              text: "BIỂU ĐỒ XU HƯỚNG THU HỌC PHÍ",
+              font: { size: 24 },
+              padding: { top: 10, bottom: 20 },
+            },
+
+            // 🎯 TOOLTIP THEO THÁNG
+            tooltip: {
+              backgroundColor: "#fff",
+              titleColor: "#222",
+              bodyColor: "#222",
+              borderColor: "#ccc",
+              borderWidth: 1,
+              padding: 12,
+
+              callbacks: {
+                title(context) {
+                  return context[0].label;
+                },
+                label(context) {
+                  const index = context.dataIndex;
+
+                  return [
+                    `Số tiền đã thu: ${hocPhiData.daThu[index]} tỷ`,
+                    `Tỷ lệ thu: ${hocPhiData.tyLeThu[index]} %`,
+                    `Mục tiêu: ${hocPhiData.mucTieu[index]} tỷ`,
+                  ];
+                },
+              },
+            },
+
+            legend: {
+              labels: {
+                padding: 20,
+                boxWidth: 14,
+                boxHeight: 14,
+                useBorderRadius: true,
+                borderRadius: 3,
+              },
+            },
+          },
+
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: "Tỷ đồng" },
+              grid: { color: "#eee" },
+            },
+            y1: {
+              position: "right",
+              beginAtZero: true,
+              max: 100,
+              title: { display: true, text: "%" },
+              grid: { drawOnChartArea: false },
             },
             x: {
               grid: { display: false },
