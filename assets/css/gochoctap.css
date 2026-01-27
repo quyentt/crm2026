@@ -9,22 +9,25 @@
   border-top-right-radius: 10px !important;
   height: 40px;
 }
-.register-school-left .department-selector .form-select{
 
-}
+.register-school-left .department-selector .form-select {}
+
 .register-school-left .reg-money .sspace-profile {
-    padding: 0 12px 10px 12px;
+  padding: 0 12px 10px 12px;
 }
-.register-school-left .reg-money .form-add-info{
+
+.register-school-left .reg-money .form-add-info {
   margin-bottom: 8px !important;
 }
 
-.register-school-left  .mt-4.box-shadow {
-    margin-top: 15px !important;
+.register-school-left .mt-4.box-shadow {
+  margin-top: 15px !important;
 }
-.register-school-left .mt-2.box-total-scores  {
-    margin-top: 15px !important;
+
+.register-school-left .mt-2.box-total-scores {
+  margin-top: 15px !important;
 }
+
 .sspace-profile {
   font-size: 14px;
   line-height: 32px;
@@ -56,7 +59,7 @@
 }
 
 .wrapper .content-page .register-school-left .block-label i {
-    padding-right: 3px;
+  padding-right: 3px;
 }
 
 .top-radius {
@@ -87,7 +90,7 @@
 }
 
 .box-scores li {
- display: flex;
+  display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #f1f1f1;
   font-size: 14px;
@@ -182,10 +185,10 @@
   color: var(--dask-blue);
   font-weight: bold;
 }
- 
+
 .transcrip-accordion .accordion-item .header:not(.collapsed) i {
   transform: rotate(90deg);
-   font-weight: 700;
+  font-weight: 700;
 }
 
 .show-in-mobi {
@@ -275,38 +278,107 @@
   color: var(--orange);
 }
 
-.reg-money.pd-15{
+.reg-money.pd-15 {
   padding: 0 !important;
 }
+
 .reg-money.pd-15 .sidebar-menu-header {
-    font-weight: 700;
-    color: var(--color-white);
-    background: var(--color-link);
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-link);
 }
-.reg-money .department-selector .form-select{
+
+.reg-money .department-selector .form-select {
   font-size: 16px;
 }
+
 .reg-money .department-selector .form-item i {
-    color: #fff !important;
-    top: 14px;
-    right: 19px;
-    margin-right: 12px;
+  color: #fff !important;
+  top: 14px;
+  right: 19px;
+  margin-right: 12px;
 }
-.register-school-right .table td,.register-school-right .table th {
-     padding-top: 13px !important;
-    padding-bottom: 12px !important;
+
+.register-school-right .table td,
+.register-school-right .table th {
+  padding-top: 13px !important;
+  padding-bottom: 12px !important;
 }
+
 .register-school-right .accordion-body .py-4 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
-.register-wish .title-is-paging .color-dask-blue{
-margin-bottom: 8px;
+
+.register-wish .title-is-paging .color-dask-blue {
+  margin-bottom: 8px;
 }
+
 .register-wish .form-top {
-    margin-bottom: 8px;
+  margin-bottom: 25px;
 }
 
 .calendar-modal-table {
-    border-top: 1px solid #cccccc !important;
+  border-top: 1px solid #cccccc !important;
+}
+
+.table tr:hover,
+.table th:hover {
+  background: #f8f8f8;
+}
+
+.table .btn.btn-default:hover {
+  background-color: var(--color-link) !important;
+  color: #fff !important;
+}
+
+.title-detai #lblTenHoc span,.modal .modal-header .finance-user-info span.color-66 {
+  color: var(--color-yellow) !important;
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.modal .modal-header .modal-title.title-detai {
+  line-height: 40px;
+  margin-top: 15px;
+  padding-top: 5px;
+}
+
+.my-calendar .modal-dialog {
+  width: 98% !important;
+}
+.modal .modal-header .finance-user-info {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 400;
+}
+.modal .modal-header .finance-user-info .button-gr .btn:first-child {
+    margin-right: 0px !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+
+
+.tblNhapDiem tr td a {
+    text-decoration: none !important;
+    font-style: inherit !important;
+    color:#222 !important;
+    cursor: pointer;
+}
+.tblNhapDiem tr td a:hover {
+    color:var(--color-link) !important;
+}
+.tblTuiThi {
+  border-top: 1px solid #e1e1e1 ;
+}
+.register-wish .table.tblTuiThi th:nth-last-child(2),
+.register-wish .table.tblTuiThi th:nth-last-child(1) {
+    text-align: center;
+}
+.lblLichSu_Tong {
+    font-size: 24px;
+    line-height: 34px !important;
 }

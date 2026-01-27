@@ -95,15 +95,16 @@
 }
 
 .link a {
-  color: #888;
+  color: #222 !important;
+  opacity: .5;
   font-size: 14px;
 }
 
 .link i {
- padding: 0px 10px;
-    color: #888;
-    font-size: 13px;
-    margin-top: 5px;
+  padding: 0px 10px;
+  color: #888;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .link a:last-child {
@@ -121,9 +122,11 @@
 .tab-item {
   position: relative;
 }
+
 .quick-action .tab-list .tab-item a {
-    padding: 10px 20px !important;
+  padding: 10px 20px !important;
 }
+
 .tab-item i {
   font-size: 34px;
   color: var(--dask-blue);
@@ -526,7 +529,8 @@
   line-height: 40px;
   font-size: 14px;
   padding-left: 42px;
-  border: 1px solid #acbeec;
+  border: 1px solid #d2d6de;
+  ;
   background: #fff;
   padding-top: 9px;
 }
@@ -537,7 +541,8 @@
   line-height: 27px;
   font-size: 14px;
   padding-left: 40px;
-  border: 1px solid #acbeec;
+  border: 1px solid #d2d6de;
+  ;
   background: #fff;
   position: relative;
   z-index: 1;
@@ -559,27 +564,28 @@
 
 .form-add-info .fa-angle-down {
   font-size: 13px;
-    margin-right: 10px;
-    margin-top: 3px !important;
-    display: block;
-    right: 0px !important;
-    left: auto;
-    position: absolute;
+  margin-right: 10px;
+  margin-top: 3px !important;
+  display: block;
+  right: 0px !important;
+  left: auto;
+  position: absolute;
 }
 
 .gv-paging-group .form-add-info .fa-angle-down {
-    font-size: 12px !important;
-    margin-right: 8px !important;
-    margin-top: -2px !important;
+  font-size: 12px !important;
+  margin-right: 8px !important;
+  margin-top: -2px !important;
 }
-.form-in-row-wrap  .form-add-info .fa-angle-down {
-    font-size: 13px;
-    margin-right: 11px;
-    margin-top: 3px !important;
-    display: block;
-    right: 0px !important;
-    left: auto;
-    position: absolute;
+
+.form-in-row-wrap .form-add-info .fa-angle-down {
+  font-size: 13px;
+  margin-right: 11px;
+  margin-top: 3px !important;
+  display: block;
+  right: 0px !important;
+  left: auto;
+  position: absolute;
 }
 
 .input-group i {
@@ -825,7 +831,8 @@
 
 .modal-content {
   border: 0px solid rgba(0, 0, 0, 0.2) !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
+  overflow: hidden;
 }
 
 /*modal-edit-file*/
@@ -922,44 +929,59 @@
 }
 
 .select2-container--default .select2-selection--single {
-  border: 1px solid #acbeec !important;
+  /* border: 1px solid #acbeec !important; */
+  border: 1px solid #d2d6de !important;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow
-  b {
-  border-color: #acbeec transparent transparent transparent !important;
+input:focus,
+input:hover,
+input:active,
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default .select2-selection--single:hover,
+.select2-container--default .select2-selection--single:active {
+  border: 1px solid #3c8dee !important;
+  box-shadow: none !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #d2d6de transparent transparent transparent !important;
 }
 
 @media (min-width: 768px) {
   .one-door .form-add-info .form-control {
     /* padding-left: 12px !important; */
   }
+
   .one-door .select2-selection {
     padding-left: 7px !important;
   }
+
   .one-door .link {
     display: flex;
     margin-bottom: 5px;
     /* padding-bottom: 15px; */
   }
+
   .sv-info-detail .col-md-1 {
     flex: 1;
   }
+
   .sv-info-detail .col-md-1,
   .sv-info-detail .col-md-2,
   .sv-info-detail .col-md-3,
   .sv-info-detail .col-md-4 {
     padding: 0 15px;
   }
+
   .sv-info-detail .col-md-3 {
     flex: 1;
   }
+
   .sv-info-profile {
     display: flex;
     padding: 15px 20px 15px 30px;
   }
+
   .row.sv-info-base {
     width: 300px;
     background: #fff;
@@ -968,14 +990,17 @@
     flex-direction: column;
     border-right: solid 1px #f1f1f1;
   }
+
   .sv-info-base .sv-info-base-avata,
   .sv-info-base .sv-info-base-text {
     width: 100%;
   }
+
   .sv-info-base .sv-info-base-text .col-md-3,
   .sv-info-base .sv-info-base-text .col-md-4 {
     flex: 1;
   }
+
   .sv-info-detail {
     flex: 1;
     padding: 0 12px;
@@ -1397,10 +1422,40 @@
   color: #fff;
 }
 
-
 .gv-button-group .form-add-info .fa-angle-down {
-    margin-top: 0px !important;
+  margin-top: 0px !important;
 }
+
 .gv-button-group .form-add-info .form-select {
-    line-height: 20px;
+  line-height: 20px;
+}
+
+.modal .modal-header {
+  text-align: center;
+    height: 60px;
+    /* line-height: 62px; */
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: var(--color-blue) !important;
+    display: flex;
+    align-items: center;
+   font-size: 18px !important;
+       line-height: 24px;
+}
+
+.modal .modal-header .modal-title {
+  color: #fff !important;
+  font-size: 20px !important;
+}
+.modal-header .btn-close {
+    color: #fff !important;
+}
+.modal .modal-header .modal-title i,
+.modal .modal-footer .btn-default i{
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.modal .modal-header .modal-title i::before,
+.modal .modal-footer .btn-default i::before{
+      font-family: "Font Awesome 5 Pro" !important;
 }

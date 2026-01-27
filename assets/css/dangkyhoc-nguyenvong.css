@@ -1,3 +1,7 @@
+
+.position-absolute {
+  position: absolute !important;
+}
 .register-wish .text-lable {
   width: auto;
   color: #222222;
@@ -11,13 +15,14 @@
 }
 
 .btn-dask-blue {
-  background-color: var(--dask-blue);
-  color: white;
+  background-color: var(--color-dask-link) !important;
+  color: white !important;
+  border: 1px solid var(--color-dask-link) !important;
 }
 
 .btn-dask-blue:hover {
-  background-color: #112358;
-  color: white;
+  background-color: #fff !important;
+  color: var(--color-dask-link) !important;
 }
 
 .title-under-line {
@@ -40,9 +45,9 @@
 }
 
 .register-wish .btn {
-  min-width: 100px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* min-width: 100px; */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .register-wish {
@@ -66,6 +71,7 @@
   padding: 10px 0.5rem 9px 0.5rem;
   vertical-align: middle;
 }
+
 .register-wish thead th {
   background-color: #f4f4f4;
   border-bottom: none;
@@ -80,9 +86,11 @@
 .dk-phuckhao .table-w {
   overflow-x: scroll;
 }
+
 .wrapper .dk-phuckhao .fw-bold.mt-3 {
-    margin-top: 1 !important;
+  margin-top: 1 !important;
 }
+
 .dk-phuckhao .table-w .table {
   width: 2000px;
 }
@@ -168,7 +176,7 @@
 .dk-phuckhao .table-w .table .is-fixed {
   position: absolute;
   z-index: 1;
-  width: 80px;
+  width: 86px;
   top: 0;
   right: -1px;
   display: flex;
@@ -178,8 +186,8 @@
   font-weight: normal;
   color: white;
   height: calc(100% + 1px);
-  border-bottom: solid 1px #43568c;
-  background: #1b3276;
+  border-bottom: solid 1px var(--color-blue);
+  background:var(--color-blue);
 }
 
 .dk-phuckhao .table-w .table th .is-fixed {
@@ -206,4 +214,29 @@
 
 .dk-phuckhao .table-w .table .label td:last-child {
   position: unset;
+}
+
+.tblSinhVien tr td:hover .btn {
+  background: var(--color-blue) !important;
+  color: #fff !important;
+}
+
+.tblSinhVien tr td:nth-child(2) .btn.btnDetail_LichHoc {
+  min-width: 74px !important;
+  padding: 0px !important;
+}
+
+/* ----------------- */
+.cmc-suvery-head .tern-name {
+    margin-top: 15px;
+}
+.zonePhieu .cmc-suvery .btn-outline-warning.btnAdd_CauHoi.btnAdd {
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+.tblPhieu .btn-default.btnEdit{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    color: var(--color-blue) !important;
 }

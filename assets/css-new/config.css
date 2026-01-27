@@ -12,14 +12,12 @@ a.btn {
 
 .btn {
   height: 38px;
-  min-width: 146px;
+  /* min-width: 146px; */
   border-radius: 4px;
   font-weight: 500;
+  font-size: 15px;
 }
 
-.btn i {
-  margin-right: 8px;
-}
 
 .btn-link {
   border: 1px solid var(--color-link);
@@ -29,11 +27,14 @@ a.btn {
 }
 
 .btn-view {
-  border: 1px solid var(--color-view);
-  background: var(--color-view);
+  border: 1px solid var(--color-link);
+  background: var(--color-link);
   color: #fff;
 }
-
+.btn-view:hover {
+  border: 1px solid var(--color-main) !important;
+  background: var(--color-main) !important;
+}
 .btn-edit {
   border: 1px solid var(--color-edit);
   background: var(--color-edit);
@@ -59,8 +60,8 @@ a.btn {
 }
 
 .btn-add {
-  border: 1px solid var(--color-add);
-  background: var(--color-add);
+  border: 1px solid var(--color-link);
+  background: var(--color-link);
   color: #fff;
 }
 
@@ -128,7 +129,9 @@ a.btn {
   padding: 0 15px;
   border-radius: 4px;
 }
-
+.btn-default {
+  border: 1px solid #e1e1e1;
+}
 .text-main {
   color: var(--color-main);
 }

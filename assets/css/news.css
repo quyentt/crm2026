@@ -428,11 +428,18 @@ color: #d1d1d1;
 }
 
 .news-list .news-item .news-item-right {
-    padding: 15px 15px 0 0;
+    padding: 5px 15px 0 0;
+    width: calc(60% - 20px);
 }
 .block-news .news-list .news-item-right {
     padding: 0;
 }
 .block-news .news-list .news-item-right .meta {
     padding: 10px 0 0 0;
+}
+.comments {
+    margin-top: 25px !important;
+}
+#btnLuuDanhDau i {
+    padding-left: 5px;
 }
