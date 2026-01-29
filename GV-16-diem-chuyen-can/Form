@@ -1,0 +1,135 @@
+<div class="row aps-add-new">
+                        <!-- 1. Noi dung bai bao -->
+                        <div class="row aps-form">
+                            <div class="row aps-lable-name">
+                                <p class="group-group-title-name border-0 mb-5">
+                                    <span class="badge color-blue fz18">Thông tin sáng kiến</span>
+                                </p>
+                            </div>
+                            <div class="row aps-form-item">
+                                <div class="col-sm-3 aps-lable-name">
+                                    <div class="title-name">
+                                        Tên sáng kiến<span class="title-colon">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 aps-form-input">
+                                    <input id="txtYK_Ten" class="form-control" placeholder="Nhập tên sáng kiến" />
+                                </div>
+                                <div class="col-sm-2 aps-lable-name text-right pr15">
+                                    <div class="title-name">
+                                        Ngày công nhận<span class="title-colon">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 aps-form-input">
+                                    <input id="txtYK_NgayCongNhan" class="form-control input-datepicker"
+                                        placeholder="dd/mm/yyyy" />
+                                </div>
+                            </div>
+                            <div class="row aps-form-item">
+                                <div class="col-sm-2 aps-lable-name">
+                                    <div class="title-name">
+                                        Số quyết định công nhận<span class="title-colon">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 aps-form-input">
+                                    <input id="txtYK_SoQuyetDinh" class="form-control" />
+                                </div>
+                                <div class="col-sm-2 aps-lable-name text-right pr15">
+                                    <div class="title-name">
+                                        Vai trò <span class="title-colon">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2  aps-form-input">
+                                    <select id="dropYK_VaiTro" class="select-opt">
+                                        <option value="">--- Chọn vai trò --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row aps-form-item">
+                                <div class="col-sm-2 aps-lable-name">
+                                    <div class="title-name">
+                                        Điểm<span class="title-colon">:</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 aps-form-input">
+                                    <input id="txtYK_Diem" class="form-control " readonly />
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <div class="row aps-form mt-20">
+                        <div class="row aps-lable-name">
+                            <p class="group-group-title-name border-0 mb-0">
+                                <span class="badge bg-blue">Thông tin quyết định</span>
+                            </p>
+                        </div>
+                        <div class="row aps-form-item">
+                            <table id="tblHocHam_QDGiaoNhhiemVu"
+                                class="table table-hover table-bordered tblHocHam_QDGiaoNhhiemVu mr-0 mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width:40px;">STT</th>
+                                        <th style="text-align:center; width: 300px">Loại quyết định</th>
+                                        <th style="text-align:center; width: 150px">Số quyết định</th>
+                                        <th style="text-align:center; width: 200px">Ngày ký quyết định</th>
+                                        <th style="text-align:center; width: 150px">Ngày bắt đầu</th>
+                                        <th style="text-align:center; width: 150px">Ngày kết thúc</th>
+                                        <th style="text-align:center; ">Mô tả</th>
+                                        <th style="text-align:center; width: 150px">File đính kèm</th>
+                                        <th style="text-align:center;width: 50px">Xóa dòng</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="pull-right">
+                                <a class="btn btn-outline-primary" id="btnThemDongMoiQDNT_DT">
+                                    <i class="fa fa-plus"></i> Thêm dòng mới</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row aps-form mt-20">
+                        <div class="row aps-lable-name border-top-0">
+                            <div class="pull-left">
+                                <p class="group-group-title-name border-0 mb-0 mt-5">
+                                    <span class="badge bg-blue">Thông tin quyết định</span>
+                                </p>
+                            </div>
+                             <div class="pull-right">
+                                <a class="btn btn-outline-primary" id="btnThemDongMoiQDNT_DT">
+                                    <i class="fa fa-plus"></i> Thêm dòng mới</a>
+                            </div>
+                        </div>
+                        <div class="row aps-form-item">
+                            <table id="tblHocHam_QDGiaoNhhiemVu"
+                                class="table table-hover table-bordered tblHocHam_QDGiaoNhhiemVu mr-0 mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width:40px;">STT</th>
+                                        <th style="text-align:center; width: 300px">Loại quyết định</th>
+                                        <th style="text-align:center; width: 150px">Số quyết định</th>
+                                        <th style="text-align:center; width: 200px">Ngày ký quyết định</th>
+                                        <th style="text-align:center; width: 150px">Ngày bắt đầu</th>
+                                        <th style="text-align:center; width: 150px">Ngày kết thúc</th>
+                                        <th style="text-align:center; ">Mô tả</th>
+                                        <th style="text-align:center; width: 150px">File đính kèm</th>
+                                        <th style="text-align:center;width: 50px">Xóa dòng</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="pull-right">
+                                <a class="btn btn-outline-primary" id="btnThemDongMoiQDNT_DT">
+                                    <i class="fa fa-plus"></i> Thêm dòng mới</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
